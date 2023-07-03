@@ -3,7 +3,9 @@
 import { nunito } from "@/utils/fonts"
 import Logo from "../Logo/Logo"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
+import { PiSignInBold } from "react-icons/pi"
+import { BiSolidChevronDown } from "react-icons/bi"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -24,6 +26,8 @@ const Navbar = () => {
     }
   }, [])
 
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <nav className={`
         ${nunito.className} fixed flex w-full z-50 transition duration-300
@@ -32,8 +36,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto p-4 flex place-content-between items-center gap-6">
         <Logo />
-        <div className="hidden lg:flex gap-10 text-dark">
-          <Link href={'/'} className="border-b-[3px] [border-image:linear-gradient(#FF9A2C,#6D5ADF)50;] ">
+        <div className="hidden md:flex gap-10 text-dark">
+          <Link href={'/'} className="border-b-[3px] [border-image:linear-gradient(#FF9A2C,#6D5ADF)50;]">
             Beranda
           </Link>
           <Link href={'/cari-fasilitas'}>
@@ -43,24 +47,42 @@ const Navbar = () => {
             Edukasi & Berita
           </Link>
         </div>
+        <div className="flex md:hidden relative p-2 justify-center text-dark">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center"
+          >
+            <p className="font-bold">Beranda</p>
+            <BiSolidChevronDown size={20} className={`absolute -right-6 transition ${isOpen && 'rotate-180'}`} />
+          </button>
+          {/* {isOpen && */}
+            <div className={`
+              flex flex-col absolute top-full text-center bg-dark text-white w-[170px] rounded-xl shadow-xl z-50 overflow-hidden transition-all ease-out duration-300
+              ${isOpen ? 'h-[124px] border-2 border-orange' : 'h-0'}
+            `}
+            >
+              <Link href={'/'} onClick={() => setIsOpen(false)} className="py-2 px-6 transition hover:bg-white/20">
+                Beranda
+              </Link>
+              <Link href={'/cari-fasilitas'} className="py-2 px-6 transition hover:bg-white/20">
+                Cari Fasilitas
+              </Link>
+              <Link href={'/edukasi-berita'} className="py-2 px-6 transition hover:bg-white/20">
+                Edukasi & Berita
+              </Link>
+            </div>
+          {/* } */}
+        </div>
         <div className="flex gap-2">
           <Link
             href={'/login'}
             className="
-              text-purple font-bold px-[32px] py-[16px] rounded-[15px] peer
+              text-purple font-bold px-[20px] sm:px-[32px] py-[16px] rounded-[15px] peer
               hover:bg-purple hover:text-white transition
             "
           >
-            Login
-          </Link>
-          <Link
-            href={'/register'}
-            className="
-              text-purple font-bold px-[32px] py-[16px] border-[1px] border-purple rounded-[15px]
-              hover:bg-purple hover:text-white transition peer-hover:border-transparent
-            "
-          >
-            Sign up
+            <p className="hidden sm:block">Login</p>
+            <PiSignInBold size={20} className="block sm:hidden" />
           </Link>
         </div>
       </div>
