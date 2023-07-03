@@ -15,7 +15,7 @@ const DescriptionModule = () => {
 
   return (
     <section className={`${poppins.className} bg-[url(/images/bg/bg-deskripsi.svg)] bg-center bg-cover bg-no-repeat overflow-hidden`}>
-      <div className="container mx-auto p-4 my-[90px] relative flex items-center justify-center">
+      <div className="container mx-auto p-4 my-[90px] relative flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center">
         <div className="relative max-w-[500px] flex flex-col gap-14">
           <Image
             src={'/images/buble.svg'}
@@ -52,7 +52,7 @@ const DescriptionModule = () => {
           src={'/images/Group-Gambar-Section-1.svg'}
           width={700} height={586.94} alt="Orang bermain laptop" ref={orangRef}
           className={`
-            hidden xl:block translate-x-[30px] transition duration-1000
+            translate-x-[30px] transition duration-1000 w-[300px] lg:w-[500px] xl:w-[700px]
             ${orangOnScreen ? 'opacity-100 translate-x-[30px]' : 'opacity-0 translate-x-[70px]'}
           `}
         />
