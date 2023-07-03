@@ -1,0 +1,49 @@
+import { nunito } from "@/utils/fonts"
+import Logo from "../Logo/Logo"
+import Link from "next/link"
+
+const Navbar = () => {
+  return (
+    <nav className={`
+        ${nunito.className} fixed flex w-full
+      `}
+    >
+      <div className="container mx-auto p-4 flex place-content-between items-center gap-6">
+        <Logo />
+        <div className="hidden lg:flex gap-10 text-dark">
+          <Link href={'/'}>
+            Beranda
+          </Link>
+          <Link href={'/cari-fasilitas'}>
+            Cari Fasilitas
+          </Link>
+          <Link href={'/edukasi-berita'}>
+            Edukasi & Berita
+          </Link>
+        </div>
+        <div className="flex gap-2">
+          <Link
+            href={'/login'}
+            className="
+              text-purple font-bold px-[32px] py-[16px] rounded-[15px] peer
+              hover:bg-purple hover:text-white transition
+            "
+          >
+            Login
+          </Link>
+          <Link
+            href={'/register'}
+            className="
+              text-purple font-bold px-[32px] py-[16px] border-[1px] border-purple rounded-[15px]
+              hover:bg-purple hover:text-white transition peer-hover:border-transparent
+            "
+          >
+            Sign up
+          </Link>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar
