@@ -3,9 +3,10 @@
 import { nunito } from "@/utils/fonts"
 import Logo from "../Logo/Logo"
 import Link from "next/link"
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { PiSignInBold } from "react-icons/pi"
 import { BiSolidChevronDown } from "react-icons/bi"
+import useOutsideClick from "../hooks/useOutsideClick"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -28,6 +29,8 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  const ref = useOutsideClick(() => setIsOpen(false))
+
   return (
     <nav className={`
         ${nunito.className} fixed flex w-full z-50 transition duration-300
@@ -47,13 +50,13 @@ const Navbar = () => {
             Edukasi & Berita
           </Link>
         </div>
-        <div className="flex md:hidden relative p-2 justify-center text-dark">
+        <div ref={ref} className="flex md:hidden relative p-2 justify-center text-dark">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex items-center"
           >
             <p className="font-bold">Beranda</p>
-            <BiSolidChevronDown size={20} className={`absolute -right-6 transition ${isOpen && 'rotate-180'}`} />
+            <BiSolidChevronDown size={20} className={`absolute -right-6 transition duration-300 ${isOpen && 'rotate-180'}`} />
           </button>
           {/* {isOpen && */}
             <div className={`
