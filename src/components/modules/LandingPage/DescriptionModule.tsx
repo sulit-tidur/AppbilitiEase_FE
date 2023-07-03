@@ -1,17 +1,29 @@
+'use client'
+
+import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
 import { poppins } from "@/utils/fonts"
 import Image from "next/image"
 import Link from "next/link"
+import { useRef } from "react"
 import { PiMagnifyingGlassBold } from "react-icons/pi"
 
 const DescriptionModule = () => {
+  const bubleRef = useRef(null)
+  const orangRef = useRef(null)
+  const bubleOnScreen = useElementOnScreen({ ref: bubleRef })
+  const orangOnScreen = useElementOnScreen({ ref: orangRef })
+
   return (
     <section className={`${poppins.className} bg-[url(/images/bg/bg-deskripsi.svg)] bg-center bg-cover bg-no-repeat overflow-hidden`}>
       <div className="container mx-auto p-4 my-[90px] relative flex items-center justify-center">
         <div className="relative max-w-[500px] flex flex-col gap-14">
           <Image
             src={'/images/buble.svg'}
-            width={50} height={50} alt="buble"
-            className="absolute -translate-y-16 -translate-x-10"
+            width={50} height={50} alt="buble" ref={bubleRef}
+            className={`
+              absolute -translate-y-16 -translate-x-10 transition duration-1000
+              ${bubleOnScreen ? 'opacity-100 -translate-x-10' : 'opacity-0 -translate-x-20'}
+            `}
           />
           <h1 className='font-bold text-5xl text-dark capitalize'>
             Apa ya Kalimat yang bagus <span className="text-purple">Buat ini</span>
@@ -38,8 +50,11 @@ const DescriptionModule = () => {
         </div>
         <Image
           src={'/images/Group-Gambar-Section-1.svg'}
-          width={700} height={586.94} alt="Orang bermain laptop"
-          className="hidden xl:block translate-x-[30px]"
+          width={700} height={586.94} alt="Orang bermain laptop" ref={orangRef}
+          className={`
+            hidden xl:block translate-x-[30px] transition duration-1000
+            ${orangOnScreen ? 'opacity-100 translate-x-[30px]' : 'opacity-0 translate-x-[70px]'}
+          `}
         />
       </div>
     </section>
