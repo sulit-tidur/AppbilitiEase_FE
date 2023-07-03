@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto p-10 flex flex-col md:flex-row min-h-[355px] place-content-between items-center justify-center gap-10 md:gap-52">
         <div className="flex flex-1 flex-col gap-4 w-full">
           <Logo footer />
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy a type specimen book.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy a type specimen book.</p>
         </div>
         <div className="flex flex-1 flex-col gap-4 w-full">
           <h3 className="font-semibold">

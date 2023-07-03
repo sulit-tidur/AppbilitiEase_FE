@@ -4,7 +4,6 @@ import { nunito } from "@/utils/fonts"
 import Logo from "../Logo/Logo"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import Indicator from "./Indicator"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
