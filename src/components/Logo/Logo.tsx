@@ -7,15 +7,15 @@ const Logo = () => {
       <Link href={'/'} className="cursor-pointer">
         <Image
           src={'/images/Logo.svg'}
-          width={237} height={53.215}
+          width={180} height={40.42}
           alt="AppbilitiEase Logo"
-          className="hidden md:block w-[237px] h-[53.215px]"
+          className="hidden md:block w-[180px] h-[40.42px]"
         />
         <Image
           src={'/images/Logo-sm.svg'}
           width={46} height={53.215}
           alt="AppbilitiEase Logo"
-          className="block md:hidden w-[46] h-[53.215px]"
+          className="block md:hidden w-[34.94px] h-[40.42px]"
         />
       </Link>
     </div>
