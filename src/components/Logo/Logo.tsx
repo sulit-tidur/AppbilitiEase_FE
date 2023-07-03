@@ -13,14 +13,14 @@ const Logo: React.FC<LogoProps> = ({ footer }) => {
           src={'/images/Logo.svg'}
           width={180} height={40.42}
           alt="AppbilitiEase Logo"
-          className={`${!footer && 'hidden md:block'} w-[180px] h-[40.42px]`}
+          className={`${!footer && 'hidden md:block'}`}
         />
         {!footer &&
           < Image
             src={'/images/Logo-sm.svg'}
-            width={46} height={53.215}
+            width={34.94} height={40.42}
             alt="AppbilitiEase Logo"
-            className="block md:hidden w-[34.94px] h-[40.42px]"
+            className="block md:hidden"
           />
         }
       </Link>
