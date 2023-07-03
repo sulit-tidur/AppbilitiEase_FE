@@ -1,7 +1,8 @@
 const Indicator = () => {
   return (
     <div>
-      Indicator
+      <hr className="border-[2px] border-orange w-full" />
+      <div />
     </div>
   )
 }

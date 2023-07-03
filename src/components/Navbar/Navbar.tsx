@@ -31,11 +31,10 @@ const Navbar = () => {
         ${scrolled ? 'bg-white shadow-md' : 'bg-transparent shadow-none'}
       `}
     >
-      <Indicator />
       <div className="container mx-auto p-4 flex place-content-between items-center gap-6">
         <Logo />
         <div className="hidden lg:flex gap-10 text-dark">
-          <Link href={'/'}>
+          <Link href={'/'} className="border-b-[3px] [border-image:linear-gradient(#FF9A2C,#6D5ADF)50;] ">
             Beranda
           </Link>
           <Link href={'/cari-fasilitas'}>
