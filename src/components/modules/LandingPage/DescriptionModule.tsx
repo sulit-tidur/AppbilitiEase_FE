@@ -16,14 +16,14 @@ const DescriptionModule = () => {
 
   return (
     <section className={`${poppins.className} bg-[url(/images/bg/bg-deskripsi.svg)] bg-center bg-cover bg-no-repeat h-fit flex flex-col relative`}>
-      <div className="container mx-auto p-4 mb-[400px]  sm:mb-[300px] md:mb-[200px] xl:mb-[150px] mt-[150px] xl:mt-[90px] flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center">
+      <div className="container mx-auto p-4 mb-[400px] xxs:mb-[300px] md:mb-[200px] xl:mb-[150px] mt-[150px] xl:mt-[90px] flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center">
         <div className="relative max-w-[500px] flex flex-col gap-14">
           <Image
             src={'/images/buble.svg'}
             width={50} height={50} alt="buble" ref={bubleRef}
             className={`
               absolute -translate-y-16 transition duration-1000
-              ${bubleOnScreen ? 'opacity-100 -translate-x-0 sm:-translate-x-10' : 'opacity-0 -translate-x-10 sm:-translate-x-20'}
+              ${bubleOnScreen ? 'opacity-100 -translate-x-0 xs:-translate-x-10' : 'opacity-0 -translate-x-10 xs:-translate-x-20'}
             `}
           />
           <h1 className='font-bold text-5xl text-dark capitalize'>
@@ -42,7 +42,7 @@ const DescriptionModule = () => {
                 Cari fasilitas terdekat...
               </p>
             </div>
-            <div className="hidden sm:block bg-purple p-4 rounded-full w-[134px]">
+            <div className="hidden xs:block bg-purple p-4 rounded-full w-[134px]">
               <p className="text-white text-center font-medium">
                 Cari
               </p>

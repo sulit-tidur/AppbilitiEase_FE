@@ -110,12 +110,12 @@ const Navbar = () => {
           <Link
             href={'/login'}
             className="
-              text-purple font-bold px-[20px] sm:px-[32px] py-[16px] rounded-[15px] peer
+              text-purple font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-purple hover:text-white transition
             "
           >
-            <p className="hidden sm:block">Login</p>
-            <PiSignInBold size={20} className="block sm:hidden" />
+            <p className="hidden xs:block">Login</p>
+            <PiSignInBold size={20} className="block xs:hidden" />
           </Link>
         </div>
       </div>
