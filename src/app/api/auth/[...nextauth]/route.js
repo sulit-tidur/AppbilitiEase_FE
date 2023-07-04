@@ -14,11 +14,12 @@ export const authOptions = {
       const { id_token } = user.account
       try {
         const res = await axios.post(
-          'http://127.0.0.1:8000/auth/google/',
+          `${process.env.NEXT_PUBLIC_BE_URL}/auth/google/`,
           {
             access_token: id_token,
           }
         )
+        console.log(res)
         const { access } = res.data
         user.account.access_token = access
         return true
@@ -28,15 +29,11 @@ export const authOptions = {
     },
 
     async jwt(token) {
-      if (token) {
-        const { access_token } = token
-        token.access_token = access_token
-      }
-
       return token
     },
 
     async session(session) {
+      console.log(session)
       session.access_token = session.token.token.account.access_token
       return session
     }
