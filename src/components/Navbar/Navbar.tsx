@@ -3,14 +3,14 @@
 import { nunito } from "@/utils/fonts"
 import Logo from "../logo/Logo"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
+import { useEffect, useMemo, useState } from "react"
 import { PiSignInBold } from "react-icons/pi"
 import { BiSolidChevronDown } from "react-icons/bi"
 import useOutsideClick from "../hooks/useOutsideClick"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
-  
 
   useEffect(() => {
     const changeNavbarBg = () => {
@@ -31,6 +31,18 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const ref = useOutsideClick(() => setIsOpen(false))
+
+  const pathname = usePathname()
+  const pathLabel = useMemo(() => {
+    switch (pathname) {
+      case '/':
+        return 'Beranda'
+      case 'cari-fasilitas':
+        return 'Cari Fasilitas'
+      case 'edukasi-berita':
+        return 'Edukasi & Berita'
+    }
+  }, [pathname])
 
   return (
     <nav className={`
@@ -56,26 +68,26 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="flex items-center"
           >
-            <p className="font-bold">Beranda</p>
-            <BiSolidChevronDown size={20} className={`absolute -right-6 transition duration-300 ${isOpen && 'rotate-180'}`} />
+            <p className="font-bold">
+              {pathLabel}
+            </p>
+            <BiSolidChevronDown size={20} className={`absolute -right-4 transition duration-300 ${isOpen && 'rotate-180'}`} />
           </button>
-          {/* {isOpen && */}
-            <div className={`
+          <div className={`
               flex flex-col absolute top-full text-center bg-dark text-white w-[170px] rounded-xl shadow-xl z-50 overflow-hidden transition-all ease-out duration-300
               ${isOpen ? 'h-[124px] border-2 border-orange' : 'h-0'}
             `}
-            >
-              <Link href={'/'} onClick={() => setIsOpen(false)} className="py-2 px-6 transition hover:bg-white/20">
-                Beranda
-              </Link>
-              <Link href={'/cari-fasilitas'} className="py-2 px-6 transition hover:bg-white/20">
-                Cari Fasilitas
-              </Link>
-              <Link href={'/edukasi-berita'} className="py-2 px-6 transition hover:bg-white/20">
-                Edukasi & Berita
-              </Link>
-            </div>
-          {/* } */}
+          >
+            <Link href={'/'} onClick={() => setIsOpen(false)} className="py-2 px-6 transition hover:bg-white/20">
+              Beranda
+            </Link>
+            <Link href={'/cari-fasilitas'} className="py-2 px-6 transition hover:bg-white/20">
+              Cari Fasilitas
+            </Link>
+            <Link href={'/edukasi-berita'} className="py-2 px-6 transition hover:bg-white/20">
+              Edukasi & Berita
+            </Link>
+          </div>
         </div>
         <div className="flex gap-2">
           <Link
