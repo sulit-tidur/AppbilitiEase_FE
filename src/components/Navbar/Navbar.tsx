@@ -1,7 +1,7 @@
 'use client'
 
 import { nunito } from "@/utils/fonts"
-import Logo from "../Logo/Logo"
+import Logo from "../logo/Logo"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { PiSignInBold } from "react-icons/pi"
@@ -10,6 +10,7 @@ import useOutsideClick from "../hooks/useOutsideClick"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
+  
 
   useEffect(() => {
     const changeNavbarBg = () => {

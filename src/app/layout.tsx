@@ -1,6 +1,6 @@
-import Navbar from '@/components/Navbar/Navbar'
+import Navbar from '@/components/navbar/Navbar'
 import './globals.css'
-import Footer from '@/components/Footer/Footer'
+import Footer from '@/components/footer/Footer'
 
 export const metadata = {
   title: 'AppbilitiEase'
