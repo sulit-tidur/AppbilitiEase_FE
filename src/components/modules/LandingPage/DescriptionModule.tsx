@@ -41,7 +41,7 @@ const DescriptionModule = () => {
                 Cari fasilitas terdekat...
               </p>
             </div>
-            <div className="bg-purple p-4 rounded-full w-[134px]">
+            <div className="hidden sm:block bg-purple p-4 rounded-full w-[134px]">
               <p className="text-white text-center font-medium">
                 Cari
               </p>
