@@ -40,7 +40,7 @@ const Navbar = () => {
     setTimeout(() => {
       setVisible(false)
     }, 300)
-  }, [])
+  }, [setIsOpen, setVisible])
 
   const ref = useOutsideClick(handleClose)
 
