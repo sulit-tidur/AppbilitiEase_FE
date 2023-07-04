@@ -1,7 +1,7 @@
 'use client'
 
 import { nunito } from "@/utils/fonts"
-import Logo from "../logo/Logo"
+import Logo from "../Logo/Logo"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useMemo, useState } from "react"
