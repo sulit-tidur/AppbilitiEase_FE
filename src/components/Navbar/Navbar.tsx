@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useState } from "react"
 import { PiSignInBold } from "react-icons/pi"
 import { BiSolidChevronDown } from "react-icons/bi"
 import useOutsideClick from "../hooks/useOutsideClick"
-import { signIn, signOut } from "next-auth/react"
+import { signIn } from "next-auth/react"
 
 
 const Navbar = () => {
