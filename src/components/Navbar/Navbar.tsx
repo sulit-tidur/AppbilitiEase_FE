@@ -4,7 +4,7 @@ import { nunito } from "@/utils/fonts"
 import Logo from "../Logo/Logo"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import { PiSignInBold } from "react-icons/pi"
 import { BiSolidChevronDown } from "react-icons/bi"
 import useOutsideClick from "../hooks/useOutsideClick"
@@ -28,9 +28,21 @@ const Navbar = () => {
     }
   }, [])
 
+  const [visible, setVisible] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
-  const ref = useOutsideClick(() => setIsOpen(false))
+  useEffect(() => {
+    setIsOpen(visible)
+  }, [visible])
+
+  const handleClose = useCallback(() => {
+    setIsOpen(false)
+    setTimeout(() => {
+      setVisible(false)
+    }, 300)
+  }, [])
+
+  const ref = useOutsideClick(handleClose)
 
   const pathname = usePathname()
   const pathLabel = useMemo(() => {
@@ -65,7 +77,10 @@ const Navbar = () => {
         </div>
         <div ref={ref} className="flex md:hidden relative p-2 justify-center text-dark">
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              if (!visible) setVisible(true)
+              else handleClose()
+            }}
             className="flex items-center"
           >
             <p className="font-bold">
@@ -73,21 +88,23 @@ const Navbar = () => {
             </p>
             <BiSolidChevronDown size={20} className={`absolute -right-4 transition duration-300 ${isOpen && 'rotate-180'}`} />
           </button>
-          <div className={`
-              flex flex-col absolute top-full text-center bg-dark text-white w-[170px] rounded-xl shadow-xl z-50 overflow-hidden transition-all ease-out duration-300
-              ${isOpen ? 'h-[124px] border-2 border-orange' : 'h-0'}
+          {visible &&
+            <div className={`
+              flex flex-col absolute top-full text-center bg-dark border-2 border-orange text-white w-[170px] rounded-xl shadow-xl z-50 overflow-hidden transition-all ease-out duration-300
+              ${isOpen ? 'h-[124px]' : 'h-0'}
             `}
-          >
-            <Link href={'/'} onClick={() => setIsOpen(false)} className="py-2 px-6 transition hover:bg-white/20">
-              Beranda
-            </Link>
-            <Link href={'/cari-fasilitas'} className="py-2 px-6 transition hover:bg-white/20">
-              Cari Fasilitas
-            </Link>
-            <Link href={'/edukasi-berita'} className="py-2 px-6 transition hover:bg-white/20">
-              Edukasi & Berita
-            </Link>
-          </div>
+            >
+              <Link href={'/'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
+                Beranda
+              </Link>
+              <Link href={'/cari-fasilitas'} className="py-2 px-6 transition hover:bg-white/20">
+                Cari Fasilitas
+              </Link>
+              <Link href={'/edukasi-berita'} className="py-2 px-6 transition hover:bg-white/20">
+                Edukasi & Berita
+              </Link>
+            </div>
+          }
         </div>
         <div className="flex gap-2">
           <Link
