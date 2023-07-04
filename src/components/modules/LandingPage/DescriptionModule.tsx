@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
 import { PiMagnifyingGlassBold } from "react-icons/pi"
+import FeaturesCard from "./FeaturesCard"
 
 const DescriptionModule = () => {
   const bubleRef = useRef(null)
@@ -14,8 +15,8 @@ const DescriptionModule = () => {
   const orangOnScreen = useElementOnScreen({ ref: orangRef })
 
   return (
-    <section className={`${poppins.className} bg-[url(/images/bg/bg-deskripsi.svg)] bg-center bg-cover bg-no-repeat overflow-hidden`}>
-      <div className="container mx-auto p-4 my-[150px] xl:my-[90px] relative flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center">
+    <section className={`${poppins.className} bg-[url(/images/bg/bg-deskripsi.svg)] bg-center bg-cover bg-no-repeat h-fit flex flex-col relative`}>
+      <div className="container mx-auto p-4 mb-[400px]  sm:mb-[300px] md:mb-[200px] xl:mb-[150px] mt-[150px] xl:mt-[90px] flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center">
         <div className="relative max-w-[500px] flex flex-col gap-14">
           <Image
             src={'/images/buble.svg'}
@@ -56,6 +57,9 @@ const DescriptionModule = () => {
             ${orangOnScreen ? 'opacity-100 translate-x-[30px]' : 'opacity-0 translate-x-[70px]'}
           `}
         />
+      </div>
+      <div className="flex flex-col absolute bottom-0 translate-y-1/2 w-full">
+        <FeaturesCard />
       </div>
     </section>
   )

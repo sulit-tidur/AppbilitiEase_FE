@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <nav className={`
-        ${nunito.className} fixed flex w-full z-50 transition duration-300
+        ${nunito.className} fixed flex w-full z-50 transition duration-300 top-0
         ${scrolled ? 'bg-white shadow-md' : 'bg-transparent shadow-none'}
       `}
     >
