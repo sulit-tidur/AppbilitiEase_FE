@@ -3,7 +3,6 @@ import { AuthModule } from "./AuthModule";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 
 async function getUser() {
-  'use server'
   const session = await getServerSession(authOptions)
   return session
 }
