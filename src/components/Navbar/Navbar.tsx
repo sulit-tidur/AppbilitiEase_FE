@@ -8,6 +8,8 @@ import { useCallback, useEffect, useMemo, useState } from "react"
 import { PiSignInBold } from "react-icons/pi"
 import { BiSolidChevronDown } from "react-icons/bi"
 import useOutsideClick from "../hooks/useOutsideClick"
+import { signIn, signOut } from "next-auth/react"
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -107,8 +109,8 @@ const Navbar = () => {
           }
         </div>
         <div className="flex gap-2">
-          <Link
-            href={'/login'}
+          <button
+            onClick={() => signIn('google')}
             className="
               text-purple font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-purple hover:text-white transition
@@ -116,7 +118,7 @@ const Navbar = () => {
           >
             <p className="hidden xs:block">Login</p>
             <PiSignInBold size={20} className="block xs:hidden" />
-          </Link>
+          </button>
         </div>
       </div>
     </nav>
