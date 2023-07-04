@@ -1,18 +1,16 @@
-import { getServerSession } from "next-auth";
-import { AuthModule } from "./AuthModule";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import AboutUsModule from "@/components/modules/LandingPage/AboutUsModule";
+import DescriptionModule from "@/components/modules/LandingPage/DescriptionModule";
+import EducationModule from "@/components/modules/LandingPage/EducationModule";
+import NearestFacilityModule from "@/components/modules/LandingPage/NearestFacilityModule";
 
-async function getUser() {
-  const session = await getServerSession(authOptions)
-  console.log(session)
-  return session
-}
-
-export default async function Home() {
-  const session = await getUser()
+export default function Home() {
   return (
-    <main>
-      <AuthModule session={session} />
-    </main>
+    <>
+      <DescriptionModule />
+      <NearestFacilityModule />
+      <EducationModule />
+      <AboutUsModule />
+    </>
+
   )
 }
