@@ -12,7 +12,7 @@ const FeaturesCard = () => {
           className="group-hover:-translate-y-1 transition"
         />
         <div className="flex flex-col gap-2 items-center xxs:items-start md:items-center xl:items-start">
-          <p className="text-white font-medium text-lg">
+        <p className="text-white font-medium text-lg text-center xxs:text-left md:text-center xl:text-left">
             Cari Fasilitas Terdekat
           </p>
           <p className="text-white/70 text-xs text-center xxs:text-left md:text-center xl:text-left">
@@ -28,7 +28,7 @@ const FeaturesCard = () => {
           className="group-hover:-translate-y-1 transition"
         />
         <div className="flex flex-col gap-2 items-center xxs:items-start md:items-center xl:items-start">
-          <p className="text-white font-medium text-lg">
+          <p className="text-white font-medium text-lg text-center xxs:text-left md:text-center xl:text-left">
             Dapatkan Edukasi & Berita Terkini
           </p>
           <p className="text-white/70 text-xs text-center xxs:text-left md:text-center xl:text-left">
@@ -44,7 +44,7 @@ const FeaturesCard = () => {
           className="group-hover:-translate-y-1 transition"
         />
         <div className="flex flex-col gap-2 items-center xxs:items-start md:items-center xl:items-start">
-          <p className="text-white font-medium text-lg">
+        <p className="text-white font-medium text-lg text-center xxs:text-left md:text-center xl:text-left">
             Berikan Penilaian
           </p>
           <p className="text-white/70 text-xs text-center xxs:text-left md:text-center xl:text-left">
