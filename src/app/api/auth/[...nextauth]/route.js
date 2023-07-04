@@ -11,23 +11,21 @@ const authOptions = {
   ],
   callbacks: {
     async signIn(user, account) {
-      if (account.provider !== 'google') {
-        return false
-      }
-
-      const { accessToken, idToken } = account
-
+      // if (account.provider !== 'google') {
+      //   return false
+      // }
+      const { access_token, id_token } = user.account
+      console.log(user)
       try {
         const res = await axios.post(
           'http://127.0.0.1:8000/auth/google/',
           {
-            access_token: accessToken,
-            id_token: idToken
+            access_token: id_token,
           }
         )
-
-        const { access_token } = res.data
-        user.accessToken = access_token
+        const { key } = res.data
+        console.log(key)
+        user.access_token = key
         return true
       } catch (err) {
         return false
@@ -35,16 +33,19 @@ const authOptions = {
     },
 
     async jwt(token, user) {
-      if (user) {
-        const { accessToken } = user
-        token.accessToken = accessToken
+      // console.log(user, "tes")
+      // console.log(token)
+      if (token) {
+        const { access_token } = token
+        token.access_token = access_token
       }
 
       return token
     },
 
     async session(session, user) {
-      session.accessToken = user.accessToken
+      session.access_token = user.access_token
+      console.log(session.access_token)
       return session
     }
   },
