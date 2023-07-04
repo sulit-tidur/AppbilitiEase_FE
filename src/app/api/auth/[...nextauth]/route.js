@@ -19,7 +19,6 @@ export const authOptions = {
             access_token: id_token,
           }
         )
-        console.log(res)
         const { access } = res.data
         user.account.access_token = access
         return true
@@ -33,7 +32,6 @@ export const authOptions = {
     },
 
     async session(session) {
-      console.log(session)
       session.access_token = session.token.token.account.access_token
       return session
     }

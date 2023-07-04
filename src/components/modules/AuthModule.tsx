@@ -7,7 +7,7 @@ export const AuthModule = ({ session }: any) => {
     console.log(session)
   }
   return (
-    <>
+    <div className='mt-[100px]'>
       <button
         onClick={() => signIn('google')}
         className="bg-black text-white"
@@ -23,6 +23,6 @@ export const AuthModule = ({ session }: any) => {
       <button onClick={getSession}>
         get session
       </button>
-    </>
+    </div>
   )
 }
