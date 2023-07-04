@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const FeaturesCard = () => {
   return (
-    <div className={`${roboto.className} bg-dark w-[95%] self-center p-10 rounded-[14px] flex flex-col md:flex-row justify-center place-content-center gap-6 xl:gap-6`}>
+    <div className={`${roboto.className} bg-dark w-[95%] max-w-[1536px] self-center p-10 rounded-[14px] flex flex-col md:flex-row justify-center place-content-center gap-6 xl:gap-6`}>
       {/* Cari Fasilitas */}
       <div className="flex flex-col xxs:flex-row md:flex-col xl:flex-row items-center gap-4 group">
         <Image
