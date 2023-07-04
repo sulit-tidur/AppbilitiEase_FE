@@ -2,7 +2,7 @@ import NextAuth from "next-auth/next"
 import GoogleProvider from "next-auth/providers/google"
 import axios from 'axios'
 
-const authOptions = {
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -10,12 +10,8 @@ const authOptions = {
     })
   ],
   callbacks: {
-    async signIn(user, account) {
-      // if (account.provider !== 'google') {
-      //   return false
-      // }
-      const { access_token, id_token } = user.account
-      console.log(user)
+    async signIn(user) {
+      const { id_token } = user.account
       try {
         const res = await axios.post(
           'http://127.0.0.1:8000/auth/google/',
@@ -23,18 +19,15 @@ const authOptions = {
             access_token: id_token,
           }
         )
-        const { key } = res.data
-        console.log(key)
-        user.access_token = key
+        const { access } = res.data
+        user.account.access_token = access
         return true
       } catch (err) {
         return false
       }
     },
 
-    async jwt(token, user) {
-      // console.log(user, "tes")
-      // console.log(token)
+    async jwt(token) {
       if (token) {
         const { access_token } = token
         token.access_token = access_token
@@ -43,9 +36,8 @@ const authOptions = {
       return token
     },
 
-    async session(session, user) {
-      session.access_token = user.access_token
-      console.log(session.access_token)
+    async session(session) {
+      session.access_token = session.token.token.account.access_token
       return session
     }
   },
