@@ -51,7 +51,7 @@ const DescriptionModule = () => {
         </div>
         <Image
           src={'/images/Group-Gambar-Section-1.svg'}
-          width={700} height={586.94} alt="Orang bermain laptop" ref={orangRef}
+          width={700} height={586.94} alt="Pencarian Fasilitas Terdekat" ref={orangRef}
           className={`
             transition duration-1000 w-[300px] lg:w-[500px] xl:w-[700px]
             ${orangOnScreen ? 'opacity-100 translate-x-[30px]' : 'opacity-0 translate-x-[70px]'}
