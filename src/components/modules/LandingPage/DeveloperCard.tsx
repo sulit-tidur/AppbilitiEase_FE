@@ -1,7 +1,6 @@
 import { poppins } from "@/utils/fonts"
 import { Developer } from "@/utils/types"
 import Image from "next/image"
-import Link from "next/link"
 
 interface DeveloperCardProps {
   developer: Developer
@@ -42,13 +41,13 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
           {developer.role}
         </p>
         <div className="flex gap-2">
-          <a href={developer.instagram} target="_blank">
+          <a href={developer.instagram} target="_blank" rel="noreferrer">
             <Image
               src={'/images/instagram.svg'}
               width={22} height={22} alt="Instagram"
             />
           </a>
-          <a href={developer.linkedin} target="_blank">
+          <a href={developer.linkedin} target="_blank" rel="noreferrer">
             <Image
               src={'/images/linkedin.svg'} 
               width={22} height={22} alt="Instagram"
