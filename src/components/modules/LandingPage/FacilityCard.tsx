@@ -10,13 +10,13 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   facility
 }) => {
   return (
-    <div className="bg-white p-2 pb-[40px] rounded-[14px] shadow-lg flex flex-col gap-2 relative group">
+    <div className="bg-white p-2 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg flex flex-col gap-2 relative group">
       {/* Facility Picture */}
       <div className="rounded-[14px] overflow-hidden">
         <Image
           src={facility.src}
           width={464} height={238} alt="Fasilitas Terdekat"
-          className="group-hover:scale-105 transition w-full aspect-[232/119] rounded-[14px]"
+          className="group-hover:scale-105 transition w-full aspect-[232/119] object-cover rounded-[14px]"
         />
       </div>
 
