@@ -16,7 +16,7 @@ const DescriptionModule = () => {
 
   return (
     <section className={`${poppins.className} bg-[url(/images/bg/bg-deskripsi.svg)] bg-center bg-cover bg-no-repeat h-fit flex flex-col relative`}>
-      <div className="container mx-auto p-4 md:max-w-[calc(100%-100px)] mb-[400px] xxs:mb-[300px] md:mb-[200px] xl:mb-[150px] mt-[150px] xl:mt-[90px] flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center">
+      <div className="container mx-auto p-4 md:max-w-[calc(100%-100px)] mb-[400px] xxs:mb-[300px] md:mb-[200px] xl:mb-[150px] mt-[150px] xl:mt-[90px] flex flex-col md:flex-row gap-y-10 gap-x-0 items-center justify-center">
         <div className="relative max-w-[500px] flex flex-col gap-14">
           <Image
             src={'/images/buble.svg'}
