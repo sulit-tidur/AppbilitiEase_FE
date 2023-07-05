@@ -42,17 +42,17 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
         </p>
 
         {/* Social Medias */}
-        <div className="flex gap-2">
+        <div className="flex gap-[1px] items-center">
           <a href={developer.instagram} target="_blank" rel="noreferrer">
             <Image
               src={'/images/instagram.svg'}
-              width={22} height={22} alt="Instagram"
+              width={30} height={30} alt="Instagram"
             />
           </a>
           <a href={developer.linkedin} target="_blank" rel="noreferrer">
             <Image
               src={'/images/linkedin.svg'} 
-              width={22} height={22} alt="Instagram"
+              width={30} height={30} alt="Linkedin"
             />
           </a>
         </div>
