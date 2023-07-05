@@ -67,13 +67,13 @@ const Navbar = () => {
       <div className="container mx-auto p-4 flex place-content-between items-center gap-6">
         <Logo />
         <div className="hidden md:flex gap-10 text-dark">
-          <Link href={'/'} className="border-b-[3px] [border-image:linear-gradient(#FF9A2C,#6D5ADF)50;]">
+          <Link href={'/'} className={`${pathLabel === 'Beranda' && 'nav-border'}`}>
             Beranda
           </Link>
-          <Link href={'/cari-fasilitas'}>
+          <Link href={'/cari-fasilitas'} className={`${pathLabel === 'Cari Fasilitas' && 'nav-border'}`}>
             Cari Fasilitas
           </Link>
-          <Link href={'/edukasi-berita'}>
+          <Link href={'/edukasi-berita'} className={`${pathLabel === 'Edukasi & Berita' && 'nav-border'}`}>
             Edukasi & Berita
           </Link>
         </div>
