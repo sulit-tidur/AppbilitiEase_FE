@@ -51,9 +51,9 @@ const Navbar = () => {
     switch (pathname) {
       case '/':
         return 'Beranda'
-      case 'cari-fasilitas':
+      case '/cari-fasilitas':
         return 'Cari Fasilitas'
-      case 'edukasi-berita':
+      case '/edukasi-berita':
         return 'Edukasi & Berita'
     }
   }, [pathname])
