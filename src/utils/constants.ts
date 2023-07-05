@@ -31,7 +31,7 @@ export const developers: Developer[] = [
     education: 'Mahasiswa Jurusan Ilmu Komputer Universitas Indonesia, Angkatan 2021',
     description: 'semoga sukses 🙏',
     role: 'Front-End Developer',
-    instagram: 'https://instagram.com/hadziqrazin',
+    instagram: 'https://www.instagram.com/hadziqrazin',
     linkedin: 'https://www.linkedin.com/in/mhadziqrazin'
   },
   {
