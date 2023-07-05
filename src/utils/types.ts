@@ -8,6 +8,7 @@ export interface Facility {
 
 export interface Developer {
   name: string
+  image: string
   education: string
   description: string
   role: string

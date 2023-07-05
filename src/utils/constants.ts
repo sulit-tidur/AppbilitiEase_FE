@@ -24,28 +24,31 @@ export const facilities: Facility[] = [
   }
 ]
 
-export const developer: Developer[] = [
+export const developers: Developer[] = [
   {
     name: 'Muhammad Hadziq Razin',
-    education: 'Mahasiswa Universitas Indonesia',
-    description: 'Prodi Ilmu Komputer angkatan 2021',
-    role: 'Front-end Developer',
+    image: '/images/hadziq-razin.png',
+    education: 'Mahasiswa Jurusan Ilmu Komputer Universitas Indonesia, Angkatan 2021',
+    description: 'semoga sukses 🙏',
+    role: 'Front-End Developer',
     instagram: 'https://instagram.com/hadziqrazin',
     linkedin: 'https://www.linkedin.com/in/mhadziqrazin'
   },
   {
     name: 'Jihan Syafa Kamila',
-    education: 'Mahasiswa Universitas Indonesia',
-    description: 'Prodi Sistem Informasi angkatan 2021',
+    image: '/images/jihan-syafa.png',
+    education: 'Mahasiswa Jurusan Sistem Informasi Universitas Indonesia, Angkatan 2021',
+    description: 'aamiin 🤲',
     role: 'UI/UX Designer',
     instagram: 'https://www.instagram.com/jihansyafaa',
     linkedin: 'https://www.linkedin.com/in/jihan-syafa-kamila'
   },
   {
-    name: 'Muhammad Hadziq Razin',
-    education: 'Mahasiswa Universitas Indonesia',
-    description: 'Prodi Ilmu Komputer angkatan 2021',
-    role: 'Back-end Developer',
+    name: 'Jason Irvine Mahendra Putra',
+    image: '/images/jason-irvine.png',
+    education: 'Mahasiswa Jurusan Ilmu Komputer Universitas Indonesia, Angkatan 2021',
+    description: 'pasti bisa 💪',
+    role: 'Back-End Developer',
     instagram: 'https://www.instagram.com/owwlvest',
     linkedin: 'https://www.linkedin.com/in/jason-irvine-mahendra-putra'
   },

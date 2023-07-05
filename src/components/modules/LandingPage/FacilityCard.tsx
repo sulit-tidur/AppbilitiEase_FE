@@ -10,7 +10,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   facility
 }) => {
   return (
-    <div className="bg-white p-2 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg flex flex-col gap-2 relative group">
+    <div className="bg-white p-4 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg flex flex-col gap-2 relative group">
       {/* Facility Picture */}
       <div className="rounded-[14px] overflow-hidden">
         <Image
