@@ -40,7 +40,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
 
       {/* Description */}
       <p className="text-xs font-normal">
-        {facility.desc}
+        {facility.description}
       </p>
 
       {/* Details Button */}

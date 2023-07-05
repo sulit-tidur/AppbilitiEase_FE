@@ -1,7 +1,6 @@
 export interface Facility {
-  id: number
   title: string
-  desc: string
+  description: string
   location: string
   src: string
   href: string
