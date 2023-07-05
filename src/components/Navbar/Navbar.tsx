@@ -116,7 +116,7 @@ const Navbar = () => {
               hover:bg-purple hover:text-white transition
             "
           >
-            <p className="hidden xs:block">Login</p>
+            <p className="hidden xs:block">Masuk</p>
             <PiSignInBold size={20} className="block xs:hidden" />
           </button>
         </div>
