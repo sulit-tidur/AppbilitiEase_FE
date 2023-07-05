@@ -16,7 +16,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
         <Image
           src={facility.src}
           width={464} height={238} alt="Fasilitas Terdekat"
-          className="group-hover:scale-105 transition aspect-[232/119] rounded-[14px]"
+          className="group-hover:scale-105 transition w-full aspect-[232/119] rounded-[14px]"
         />
       </div>
 
