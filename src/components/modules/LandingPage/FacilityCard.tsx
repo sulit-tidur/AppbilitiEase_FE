@@ -21,7 +21,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
       </div>
 
       {/* Location & Rating */}
-      <div className="flex place-content-between flex-wrap">
+      <div className="flex place-content-between flex-wrap gap-x-4">
         <p className="text-base text-neutral-500 font-normal">
           {facility.location}
         </p>
