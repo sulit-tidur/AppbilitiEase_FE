@@ -40,6 +40,8 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
         <p className="font-medium text-rose">
           {developer.role}
         </p>
+
+        {/* Social Medias */}
         <div className="flex gap-2">
           <a href={developer.instagram} target="_blank" rel="noreferrer">
             <Image
