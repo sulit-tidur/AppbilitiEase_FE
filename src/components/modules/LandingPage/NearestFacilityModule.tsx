@@ -29,7 +29,7 @@ const NearestFacilityModule = () => {
           </div>
 
           {/* Facilities */}
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-x-6 gap-y-14">
             <div
               ref={first}
               className={`transition duration-1000 ${firstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
