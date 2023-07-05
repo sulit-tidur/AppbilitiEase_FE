@@ -11,7 +11,7 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
   developer
 }) => {
   return (
-    <div className={`${poppins.className} bg-white p-4 shadow-lg rounded-[14px] max-w-[480px] flex flex-col gap-4`}>
+    <div className={`${poppins.className} bg-white p-4 shadow-lg rounded-[14px] max-w-[480px] flex flex-col gap-4 group`}>
       {/* Facility Picture */}
       <div className="rounded-[14px] overflow-hidden">
         <Image

@@ -1,8 +1,20 @@
+'use client'
+
 import { developers } from "@/utils/constants"
 import { jost, poppins } from "@/utils/fonts"
 import DeveloperCard from "./DeveloperCard"
+import { useRef } from "react"
+import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
 
 const AboutUsModule = () => {
+
+  const hadziq = useRef(null)
+  const hadziqOnScreen = useElementOnScreen({ ref: hadziq })
+  const jihan = useRef(null)
+  const jihanOnScreen = useElementOnScreen({ ref: jihan })
+  const jason = useRef(null)
+  const jasonOnScreen = useElementOnScreen({ ref: jason })
+
   return (
     <section className="h-fit bg-[url(/images/bg/bg-kami.svg)] bg-center bg-cover bg-no-repeat">
       <div className="container mx-auto px-4 py-14 md:max-w-[calc(100%-100px)]">
@@ -23,9 +35,24 @@ const AboutUsModule = () => {
 
           {/* The People */}
           <div className="flex flex-wrap justify-center gap-8">
-            {developers.map((developer, key) => (
-              <DeveloperCard key={key} developer={developer} />
-            ))}
+            <div
+              ref={hadziq}
+              className={`transition duration-1000 ${hadziqOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+            >
+              <DeveloperCard developer={developers[0]} />
+            </div>
+            <div
+              ref={jihan}
+              className={`transition delay-100 duration-1000 ${jihanOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+            >
+              <DeveloperCard developer={developers[1]} />
+            </div>
+            <div
+              ref={jason}
+              className={`transition delay-200 duration-1000 ${jasonOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+            >
+            <DeveloperCard developer={developers[2]} />
+            </div>
           </div>
         </div>
       </div>
