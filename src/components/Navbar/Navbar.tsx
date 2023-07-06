@@ -55,6 +55,8 @@ const Navbar = () => {
         return 'Cari Fasilitas'
       case '/edukasi-berita':
         return 'Edukasi & Berita'
+      default:
+        return ''
     }
   }, [pathname])
 
@@ -77,7 +79,7 @@ const Navbar = () => {
             Edukasi & Berita
           </Link>
         </div>
-        <div ref={ref} className="flex md:hidden relative p-2 justify-center text-dark">
+        <div ref={ref} className={`flex md:hidden ${pathLabel === '' && 'hidden'} relative p-2 justify-center text-dark`}>
           <button
             onClick={() => {
               if (!visible) setVisible(true)
@@ -109,8 +111,8 @@ const Navbar = () => {
           }
         </div>
         <div className="flex gap-2">
-          <button
-            onClick={() => signIn('google')}
+          <Link
+            href={'/login'}
             className="
               text-purple font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-purple hover:text-white transition
@@ -118,7 +120,7 @@ const Navbar = () => {
           >
             <p className="hidden xs:block">Masuk</p>
             <PiSignInBold size={20} className="block xs:hidden" />
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

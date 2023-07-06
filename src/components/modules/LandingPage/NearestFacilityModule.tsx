@@ -20,7 +20,7 @@ const NearestFacilityModule = () => {
         <div className="flex flex-col items-center gap-12">
           {/* Header */}
           <div className="flex flex-col items-center gap-2 text-center">
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-5xl font-semibold text-dark">
               <span className="text-purple">Fasilitas</span> Terdekat
             </h1>
             <p className="text-neutral-400 font-medium text-xl">
