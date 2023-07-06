@@ -15,8 +15,8 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
       <div className="rounded-[14px] overflow-hidden">
         <Image
           src={developer.image}
-          width={464} height={238} alt="Developer"
-          className="transition motion-safe:group-hover:scale-105 w-full aspect-[232/119] object-cover rounded-[14px]"
+          width={464} height={280} alt="Developer"
+          className="transition motion-safe:group-hover:scale-105 w-full aspect-[58/35] object-cover rounded-[14px]"
         />
       </div>
 
