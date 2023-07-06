@@ -2,6 +2,7 @@
 
 import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
 import { poppins } from "@/utils/fonts"
+import { signIn } from "next-auth/react"
 import Image from "next/image"
 import { useRef } from "react"
 
@@ -30,7 +31,7 @@ const LoginModule = () => {
               Berikan <span className="text-rose">ulasan</span> dan <span className="text-orange">penilaian</span> terhadap fasilitas yang pernah kamu kunjungi!
             </p>
             <button
-
+              onClick={() => signIn('google')}
               className="
                 bg-light-blue py-[12px] px-[9px] flex items-center gap-2 justify-center rounded-[12px]
                 transition motion-safe:hover:-translate-y-1 hover:shadow-md
