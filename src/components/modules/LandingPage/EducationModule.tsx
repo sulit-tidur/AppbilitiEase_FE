@@ -1,13 +1,21 @@
 'use client'
 
 import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
+import useLandingRef from "@/components/hooks/useLandingRef"
 import { nunito, poppins, roboto } from "@/utils/fonts"
 import Image from "next/image"
 import Link from "next/link"
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { IoIosArrowDroprightCircle } from "react-icons/io"
 
 const EducationModule = () => {
+
+  const landingPageRef = useLandingRef()
+  const educationNewsRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    landingPageRef.setEducationNewsRef(educationNewsRef)
+  }, [educationNewsRef])
 
   const orangFirstRef = useRef(null)
   const orangFirstOnScreen = useElementOnScreen({ ref: orangFirstRef })
@@ -19,7 +27,7 @@ const EducationModule = () => {
   const beritaOnScreen = useElementOnScreen({ ref: beritaRef })
 
   return (
-    <section className="h-fit bg-cream">
+    <section ref={educationNewsRef} className="h-fit bg-cream">
       <div className="container mx-auto px-4 py-14 md:max-w-[calc(100%-100px)]">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-x-20 gap-y-14">
           {/* Education & News Illustration */}

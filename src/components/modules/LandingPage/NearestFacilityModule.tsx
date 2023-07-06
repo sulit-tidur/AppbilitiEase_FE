@@ -3,10 +3,19 @@
 import { poppins } from "@/utils/fonts"
 import { facilities } from "@/utils/constants"
 import FacilityCard from "./FacilityCard"
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
+import useLandingRef from "@/components/hooks/useLandingRef"
 
 const NearestFacilityModule = () => {
+
+  const landingPageRef = useLandingRef()
+  const nearestFacilityRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    landingPageRef.setNearestFacilityRef(nearestFacilityRef)
+  }, [nearestFacilityRef])
+
   const first = useRef(null)
   const firstOnScreen = useElementOnScreen({ ref: first })
   const second = useRef(null)
@@ -15,7 +24,7 @@ const NearestFacilityModule = () => {
   const thirdOnScreen = useElementOnScreen({ ref: third })
 
   return (
-    <section className={`${poppins.className} bg-[url(/images/bg/bg-fasilitas.svg)] bg-center bg-cover bg-no-repeat h-fit flex`}>
+    <section ref={nearestFacilityRef} className={`${poppins.className} bg-[url(/images/bg/bg-fasilitas.svg)] bg-center bg-cover bg-no-repeat h-fit flex`}>
       <div className="container mx-auto p-4 md:max-w-[calc(100%-100px)] mb-20 mt-[430px] xxs:mt-[330px] md:mt-[220px] xl:mt-[170px]">
         <div className="flex flex-col items-center gap-12">
           {/* Header */}
