@@ -23,7 +23,7 @@ const DescriptionModule = () => {
             width={50} height={50} alt="buble" ref={bubleRef}
             className={`
               absolute -translate-y-16 transition duration-1000
-              ${bubleOnScreen ? 'opacity-100 -translate-x-0 xs:-translate-x-10' : 'opacity-0 -translate-x-10 xs:-translate-x-20'}
+              ${bubleOnScreen ? 'opacity-100 -translate-x-0 xs:-translate-x-10' : 'opacity-0 motion-safe:-translate-x-10 xs:-translate-x-20 motion-reduce:xs:-translate-x-10'}
             `}
           />
           <h1 className='font-bold text-5xl text-dark capitalize'>
@@ -34,7 +34,7 @@ const DescriptionModule = () => {
           </p>
           <Link
             href={'/cari-fasilitas'}
-            className="flex place-content-between items-center bg-white rounded-full p-2 shadow-lg transition hover:shadow-xl hover:-translate-y-1"
+            className="flex place-content-between items-center bg-white rounded-full p-2 shadow-lg transition hover:shadow-xl motion-safe:hover:-translate-y-1"
           >
             <div className="flex items-center gap-2 p-4">
               <PiMagnifyingGlassBold size={15} />
@@ -54,7 +54,7 @@ const DescriptionModule = () => {
           width={700} height={586.94} alt="Pencarian Fasilitas Terdekat" ref={orangRef}
           className={`
             transition duration-1000 w-[300px] lg:w-[500px] xl:w-[700px]
-            ${orangOnScreen ? 'opacity-100 translate-x-[30px]' : 'opacity-0 translate-x-[70px]'}
+            ${orangOnScreen ? 'opacity-100 translate-x-[30px]' : 'opacity-0 translate-x-[70px] motion-reduce:translate-x-[30px]'}
           `}
         />
       </div>

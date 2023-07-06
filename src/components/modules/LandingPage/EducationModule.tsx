@@ -28,7 +28,7 @@ const EducationModule = () => {
             width={614} height={635} alt="Edukasi dan Berita" ref={orangFirstRef}
             className={`
               block sm:hidden lg:block w-[300px] lg:w-[450px] xl:w-[614px] transition duration-1000
-              ${orangFirstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}
+              ${orangFirstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}
             `}
           />
           <div className="flex flex-col gap-14">
@@ -45,7 +45,7 @@ const EducationModule = () => {
                 width={614} height={635} alt="Edukasi dan Berita" ref={orangSecondRef}
                 className={`
                   hidden sm:block lg:hidden w-[300px] transition duration-1000
-                  ${orangSecondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}
+                  ${orangSecondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}
                 `}
               />
 
@@ -55,7 +55,7 @@ const EducationModule = () => {
                   ref={edukasiRef}
                   className={`
                     flex gap-4 items-center transition duration-1000
-                    ${edukasiOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}
+                    ${edukasiOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}
                   `}
                 >
                   <Image
@@ -78,7 +78,7 @@ const EducationModule = () => {
                   ref={beritaRef}
                   className={`
                     flex gap-4 items-center transition duration-1000
-                    ${beritaOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}
+                    ${beritaOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}
                   `}
                 >
                   <Image
@@ -101,7 +101,7 @@ const EducationModule = () => {
                   href={'/edukasi-berita'}
                   className={`
                     ${nunito.className} w-fit flex gap-[4px] mt-8 items-center py-2 px-4 rounded-full
-                    bg-orange text-white shadow-md transition hover:-translate-y-1 hover:shadow-lg
+                    bg-orange text-white shadow-md transition motion-safe:hover:-translate-y-1 hover:shadow-lg
                   `}
                 >
                   <p>
@@ -111,8 +111,6 @@ const EducationModule = () => {
                 </Link>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>

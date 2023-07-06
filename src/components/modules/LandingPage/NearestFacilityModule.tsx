@@ -32,19 +32,19 @@ const NearestFacilityModule = () => {
           <div className="flex flex-col md:flex-row gap-x-6 gap-y-14">
             <div
               ref={first}
-              className={`transition duration-1000 ${firstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+              className={`transition duration-1000 ${firstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
             >
               <FacilityCard facility={facilities[0]} />
             </div>
             <div
               ref={second}
-              className={`transition delay-100 duration-1000 ${secondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+              className={`transition delay-100 duration-1000 ${secondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
             >
               <FacilityCard facility={facilities[1]} />
             </div>
             <div
               ref={third}
-              className={`transition delay-200 duration-1000 ${thirdOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+              className={`transition delay-200 duration-1000 ${thirdOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
             >
               <FacilityCard facility={facilities[2]} />
             </div>

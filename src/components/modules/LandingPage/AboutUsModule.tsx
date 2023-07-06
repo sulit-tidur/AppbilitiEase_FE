@@ -37,19 +37,19 @@ const AboutUsModule = () => {
           <div className="flex flex-wrap justify-center gap-8">
             <div
               ref={hadziq}
-              className={`transition duration-1000 ${hadziqOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+              className={`transition duration-1000  ${hadziqOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}`}
             >
               <DeveloperCard developer={developers[0]} />
             </div>
             <div
               ref={jihan}
-              className={`transition delay-100 duration-1000 ${jihanOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+              className={`transition delay-100 duration-1000 ${jihanOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}`}
             >
               <DeveloperCard developer={developers[1]} />
             </div>
             <div
               ref={jason}
-              className={`transition delay-200 duration-1000 ${jasonOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+              className={`transition delay-200 duration-1000 ${jasonOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}`}
             >
             <DeveloperCard developer={developers[2]} />
             </div>

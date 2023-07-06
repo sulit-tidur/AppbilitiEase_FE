@@ -10,13 +10,13 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   facility
 }) => {
   return (
-    <div className="bg-white p-4 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg flex flex-col gap-2 relative group">
+    <div className="bg-white p-4 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg transition duration-300 hover:shadow-xl flex flex-col gap-2 relative group">
       {/* Facility Picture */}
       <div className="rounded-[14px] overflow-hidden">
         <Image
           src={facility.src}
           width={464} height={238} alt="Fasilitas Terdekat"
-          className="group-hover:scale-105 transition w-full aspect-[232/119] object-cover rounded-[14px]"
+          className="motion-safe:group-hover:scale-105 transition w-full aspect-[232/119] object-cover rounded-[14px]"
         />
       </div>
 
@@ -48,7 +48,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
         href={facility.href}
         className="
           text-lg font-normal text-white bg-rose w-fit self-center py-2 px-10 rounded-full
-          translate-y-1/2 absolute bottom-0 hover:translate-y-[40%] transition
+          translate-y-1/2 absolute bottom-0 motion-safe:hover:translate-y-[40%] transition
         "
       >
         Lihat

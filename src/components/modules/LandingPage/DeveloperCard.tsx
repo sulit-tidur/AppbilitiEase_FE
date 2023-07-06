@@ -10,13 +10,13 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
   developer
 }) => {
   return (
-    <div className={`${poppins.className} bg-white p-4 shadow-lg rounded-[14px] max-w-[480px] flex flex-col gap-4 group`}>
+    <div className={`${poppins.className} bg-white p-4 shadow-lg transition duration-300 hover:shadow-xl rounded-[14px] max-w-[480px] flex flex-col gap-4 group`}>
       {/* Facility Picture */}
       <div className="rounded-[14px] overflow-hidden">
         <Image
           src={developer.image}
           width={464} height={238} alt="Developer"
-          className="group-hover:scale-105 transition w-full aspect-[232/119] object-cover rounded-[14px]"
+          className="transition motion-safe:group-hover:scale-105 w-full aspect-[232/119] object-cover rounded-[14px]"
         />
       </div>
 

@@ -9,7 +9,7 @@ const FeaturesCard = () => {
         <Image
           src={'/images/cari-fasilitas-icon.svg'}
           width={101} height={101} alt="Cari Fasilitas"
-          className="group-hover:-translate-y-1 transition rounded-[23px]"
+          className="motion-safe:group-hover:-translate-y-1 transition rounded-[23px]"
         />
         <div className="flex flex-col gap-2 items-center xxs:items-start md:items-center xl:items-start">
           <p className="text-white font-medium text-lg text-center xxs:text-left md:text-center xl:text-left">
@@ -25,7 +25,7 @@ const FeaturesCard = () => {
         <Image
           src={'/images/edukasi-icon.svg'}
           width={101} height={101} alt="Edukasi & Berita"
-          className="group-hover:-translate-y-1 transition rounded-[23px]"
+          className="motion-safe:group-hover:-translate-y-1 transition rounded-[23px]"
         />
         <div className="flex flex-col gap-2 items-center xxs:items-start md:items-center xl:items-start">
           <p className="text-white font-medium text-lg text-center xxs:text-left md:text-center xl:text-left">
@@ -41,7 +41,7 @@ const FeaturesCard = () => {
         <Image
           src={'/images/review-icon.svg'}
           width={101} height={101} alt="Beri Penilaian"
-          className="group-hover:-translate-y-1 transition rounded-[23px]"
+          className="motion-safe:group-hover:-translate-y-1 transition rounded-[23px]"
         />
         <div className="flex flex-col gap-2 items-center xxs:items-start md:items-center xl:items-start">
           <p className="text-white font-medium text-lg text-center xxs:text-left md:text-center xl:text-left">
