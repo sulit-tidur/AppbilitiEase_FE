@@ -1,15 +1,42 @@
 import useLandingRef from "@/components/hooks/useLandingRef"
 import { roboto } from "@/utils/fonts"
 import Image from "next/image"
+import { useRef } from "react"
 
 const FeaturesCard = () => {
   const landingPageRef = useLandingRef()
 
+  const cardRef = useRef<HTMLDivElement>(null)
+
+  const handleScrollToFacilities = () => {
+    const element = landingPageRef.nearestFacilityRef?.current
+    const navHeight = 88
+    const elementPosition = element?.getBoundingClientRect().top || 0
+    const offset = elementPosition + window.scrollY - navHeight + ((cardRef.current?.getBoundingClientRect().height || 0) / 2)
+
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    })
+  }
+
+  const handleScrollToEducationNews = () => {
+    const element = landingPageRef.educationNewsRef?.current
+    const navHeight = 88
+    const elementPosition = element?.getBoundingClientRect().top || 0
+    const offset = elementPosition + window.scrollY - navHeight
+
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    })
+  }
+
   return (
-    <div className={`${roboto.className} bg-dark w-[95%] max-w-[1536px] self-center p-10 rounded-[14px] flex flex-col md:flex-row justify-center place-content-center gap-6 xl:gap-6`}>
+    <div ref={cardRef} className={`${roboto.className} bg-dark w-[95%] max-w-[1536px] self-center p-10 rounded-[14px] flex flex-col md:flex-row justify-center place-content-center gap-6 xl:gap-6`}>
       {/* Cari Fasilitas */}
       <button
-        onClick={() => landingPageRef.nearestFacilityRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+        onClick={handleScrollToFacilities}
         className="flex flex-col xxs:flex-row md:flex-col xl:flex-row items-center gap-4 group"
       >
         <Image
@@ -28,7 +55,7 @@ const FeaturesCard = () => {
       </button>
       {/* Edukasi & Berita */}
       <button
-        onClick={() => landingPageRef.educationNewsRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+        onClick={handleScrollToEducationNews}
         className="flex flex-col xxs:flex-row md:flex-col xl:flex-row items-center gap-4 group"
       >
         <Image
@@ -47,7 +74,7 @@ const FeaturesCard = () => {
       </button>
       {/* Review */}
       <button
-        onClick={() => landingPageRef.nearestFacilityRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+        onClick={handleScrollToFacilities}
         className="flex flex-col xxs:flex-row md:flex-col xl:flex-row items-center gap-4 group"
       >
         <Image
