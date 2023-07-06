@@ -92,8 +92,8 @@ const Navbar = () => {
           </button>
           {visible &&
             <div className={`
-              flex flex-col absolute top-full text-center bg-dark border-2 border-orange text-white w-[170px] rounded-xl shadow-xl z-50 overflow-hidden motion-safe:transition-all ease-out motion-safe:duration-300
-              ${isOpen ? 'h-[124px]' : 'motion-safe:h-0'}
+              flex flex-col absolute top-full text-center bg-dark border-2 border-orange text-white w-[170px] rounded-xl shadow-xl z-50 overflow-hidden transition-all ease-out duration-300
+              ${isOpen ? 'h-[124px]' : 'motion-safe:h-0 motion-reduce:opacity-0'}
             `}
             >
               <Link href={'/'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
