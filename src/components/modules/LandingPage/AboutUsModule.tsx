@@ -22,7 +22,7 @@ const AboutUsModule = () => {
           {/* Header */}
           <div className="flex flex-col items-center gap-2 text-center">
             <div className={`${jost.className}`}>
-              <h1 className="font-semibold text-5xl">
+              <h1 className="font-semibold text-5xl text-dark">
                 Tentang <span className="text-purple">Kami</span>
               </h1>
             </div>
