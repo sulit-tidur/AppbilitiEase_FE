@@ -5,13 +5,16 @@ import Logo from "../Logo/Logo"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useCallback, useEffect, useMemo, useState } from "react"
-import { PiSignInBold } from "react-icons/pi"
+import { PiSignInBold, PiSignOutBold } from "react-icons/pi"
 import { BiSolidChevronDown } from "react-icons/bi"
 import useOutsideClick from "../hooks/useOutsideClick"
-import { signIn } from "next-auth/react"
+import { signOut } from "next-auth/react"
 
+interface NavbarProps {
+  session: any
+}
 
-const Navbar = () => {
+const Navbar: React.FC<NavbarProps> = ({ session }) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -111,16 +114,30 @@ const Navbar = () => {
           }
         </div>
         <div className="flex gap-2">
-          <Link
-            href={'/login'}
-            className="
+          {!session &&
+            <Link
+              href={'/login'}
+              className="
               text-purple font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-purple hover:text-white transition
             "
-          >
-            <p className="hidden xs:block">Masuk</p>
-            <PiSignInBold size={20} className="block xs:hidden" />
-          </Link>
+            >
+              <p className="hidden xs:block">Masuk</p>
+              <PiSignInBold size={20} className="block xs:hidden" />
+            </Link>
+          }
+          {session &&
+            <button
+              onClick={() => signOut()}
+              className="
+              text-rose font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
+              hover:bg-rose hover:text-white transition
+            "
+            >
+              <p className="hidden xs:block">Keluar</p>
+              <PiSignOutBold size={20} className="block xs:hidden" />
+            </button>
+          }
         </div>
       </div>
     </nav>
