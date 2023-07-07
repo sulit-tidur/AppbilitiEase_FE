@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
 
   return (
     <nav className={`
-        ${nunito.className} fixed flex w-full z-50 transition duration-300 top-0
+        ${nunito.className} fixed flex w-full z-50 transition duration-300 top-0 min-h-[88px]
         ${scrolled ? 'bg-white shadow-md' : 'bg-transparent shadow-none'}
       `}
     >
