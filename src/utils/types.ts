@@ -15,3 +15,9 @@ export interface Developer {
   instagram: string
   linkedin: string
 }
+
+export interface Education {
+  image: string
+  content: string
+  href: string
+}

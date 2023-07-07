@@ -13,7 +13,7 @@ const SearchSection = () => {
   }
 
   return (
-    <section className="flex pt-8 md:pt-14 sm:px-14">
+    <section className="flex sm:px-14">
       <form onSubmit={handleSubmit} className="w-full">
         <div onClick={() => ref.current?.focus()}
           className="

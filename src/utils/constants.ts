@@ -1,4 +1,4 @@
-import { Developer, Facility } from "./types"
+import { Developer, Education, Facility } from "./types"
 
 export const facilities: Facility[] = [
   {
@@ -51,5 +51,38 @@ export const developers: Developer[] = [
     role: 'Back-End Developer',
     instagram: 'https://www.instagram.com/owwlvest',
     linkedin: 'https://www.linkedin.com/in/jason-irvine-mahendra-putra'
+  }
+]
+
+export const educations: Education[] = [
+  {
+    image: '/images/pacil-lg.svg',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
+    href: '/edukasi-berita'
   },
+  {
+    image: '/images/pacil-lg.svg',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
+    href: '/edukasi-berita'
+  },
+  {
+    image: '/images/pacil-lg.svg',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
+    href: '/edukasi-berita'
+  },
+  {
+    image: '/images/pacil-lg.svg',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
+    href: '/edukasi-berita'
+  },
+  {
+    image: '/images/pacil-lg.svg',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
+    href: '/edukasi-berita'
+  },
+  {
+    image: '/images/pacil-lg.svg',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
+    href: '/edukasi-berita'
+  }
 ]
