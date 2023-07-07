@@ -51,16 +51,19 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
 
   const pathname = usePathname()
   const pathLabel = useMemo(() => {
-    switch (pathname) {
-      case '/':
-        return 'Beranda'
-      case '/cari-fasilitas':
-        return 'Cari Fasilitas'
-      case '/edukasi-berita':
-        return 'Edukasi & Berita'
-      default:
-        return ''
+    if (pathname === '/') {
+      return 'Beranda'
     }
+
+    if (pathname.startsWith('/cari-fasilitas')) {
+      return 'Cari Fasilitas'
+    }
+
+    if (pathname.startsWith('/edukasi-berita')) {
+      return 'Edukasi & Berita'
+    }
+
+    return ''
   }, [pathname])
 
   return (
