@@ -15,7 +15,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
     <div
       className={`
         flex flex-col p-4 pb-[40px] gap-2 hover:shadow-lg duration-300
-        max-w-[500px] rounded-[30px] relative
+        max-w-[500px] rounded-[30px] relative group
         ${type === 0 && 'bg-violet'}
         ${type === 1 && 'bg-light-yellow'}
         ${type === 2 && 'bg-pink'}
@@ -25,7 +25,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
         <Image
           src={education.image}
           width={438} height={355} alt="Fasilkom UI"
-          className="w-full aspect-[438/355] object-cover rounded-[14px]"
+          className="w-full aspect-[438/355] object-cover rounded-[14px] transition motion-safe:group-hover:scale-105"
         />
       </div>
       <p className="font-normal w-full text-lg line-clamp-3">
