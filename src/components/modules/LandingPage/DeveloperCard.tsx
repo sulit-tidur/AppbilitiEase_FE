@@ -12,7 +12,7 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({
   return (
     <div className={`${poppins.className} bg-white p-4 shadow-lg transition duration-300 hover:shadow-xl rounded-[14px] max-w-[480px] flex flex-col gap-4 group`}>
       {/* Facility Picture */}
-      <div className="rounded-[14px] overflow-hidden">
+      <div className="rounded-[14px] overflow-hidden isolate">
         <Image
           src={developer.image}
           width={464} height={280} alt="Developer"

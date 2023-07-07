@@ -18,7 +18,7 @@ const SearchSection = () => {
         <div onClick={() => ref.current?.focus()}
           className="
             border-2 border-dark rounded-full py-[4px] h-[50px] xs:h-[68px] flex items-center justify-center
-            transition hover:shadow-lg relative overflow-hidden hover:cursor-pointer
+            transition hover:shadow-lg relative overflow-hidden hover:cursor-pointer isolate
           "
         >
           <PiMagnifyingGlassBold size={15} className="mx-4 xs:mx-0 xs:absolute xs:left-[20px]" />
@@ -34,7 +34,7 @@ const SearchSection = () => {
           <button
             type="submit"
             className={`
-              self-end hidden xs:block bg-purple rounded-full transition-all delay-300 duration-1000 ease-out
+              hidden xs:block bg-purple rounded-full transition-all delay-300 duration-1000 ease-out
               absolute right-[4px] ${value == '' ? 'motion-reduce:opacity-0 motion-safe:translate-x-[110%]' : 'motion-reduce:opacity-100 translate-x-0'} peer-focus:translate-x-0
               motion-reduce:peer-focus:opacity-100
             `}
