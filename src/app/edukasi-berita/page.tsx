@@ -1,7 +1,9 @@
-import EducationNewsModule from "@/components/modules/EducationNewsPage/EducationNewsModule";
+import HeroModule from "@/components/modules/EducationNewsPage/HeroModule";
 
 export default function EducationNews() {
   return (
-    <EducationNewsModule />
+    <>
+      <HeroModule />
+    </>
   )
 }
