@@ -11,7 +11,7 @@ const HeroModule = () => {
   const titleOnScreen = useElementOnScreen({ ref: titleRef })
 
   return (
-    <section className={`${nunito.className} bg-[url(/images/bg/bg-edukasi-berita.svg)] bg-center bg-cover bg-no-repeat h-fit max-h-screen flex`}>
+    <section className={`${nunito.className} bg-[url(/images/bg/bg-edukasi-berita.svg)] bg-center bg-cover bg-no-repeat h-fit flex`}>
       <div className="mt-[88px] md:mt-[93px] relative flex w-full justify-center overflow-hidden">
         <Image
           src={'/images/bg/circle-edukasi-berita.svg'}
