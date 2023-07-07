@@ -1,4 +1,5 @@
 import EducationSection from "./EducationSection"
+import NewsSection from "./NewsSection"
 import SearchSection from "./SearchSection"
 
 const BodyModule = () => {
@@ -7,6 +8,8 @@ const BodyModule = () => {
       <SearchSection />
       <hr />
       <EducationSection />
+      <hr />
+      <NewsSection />
     </section>
   )
 }

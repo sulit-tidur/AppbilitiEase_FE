@@ -27,6 +27,7 @@ module.exports = {
         'cream': '#FDF8EE',
         'rose': '#FE5A5D',
         'light-blue': '#E9F7FF',
+        'blue': '#199EEB',
         'pink': '#FFE1DB',
         'violet': '#E5E0FF',
         'light-purple': '#7358FF',

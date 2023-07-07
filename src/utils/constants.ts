@@ -1,4 +1,4 @@
-import { Developer, Education, Facility } from "./types"
+import { Developer, Education, Facility, News } from "./types"
 
 export const facilities: Facility[] = [
   {
@@ -84,5 +84,29 @@ export const educations: Education[] = [
     image: '/images/pacil-lg.svg',
     content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
     href: '/edukasi-berita'
+  }
+]
+
+export const news: News[] = [
+  {
+    image: '/images/pacil-lg.svg',
+    title: 'Judul Berita',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit. Tincidunt donec vulputate ipsum erat urna auctor.',
+    href: '/edukasi-berita',
+    date: '2023-01-01'
+  },
+  {
+    image: '/images/pacil-lg.svg',
+    title: 'Judul Berita',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit. Tincidunt donec vulputate ipsum erat urna auctor.',
+    href: '/edukasi-berita',
+    date: '2023-01-01'
+  },
+  {
+    image: '/images/pacil-lg.svg',
+    title: 'Judul Berita',
+    content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit. Tincidunt donec vulputate ipsum erat urna auctor.',
+    href: '/edukasi-berita',
+    date: '2023-01-01'
   }
 ]

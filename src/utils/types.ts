@@ -21,3 +21,11 @@ export interface Education {
   content: string
   href: string
 }
+
+export interface News {
+  image: string
+  title: string
+  content: string
+  href: string
+  date: string
+}
