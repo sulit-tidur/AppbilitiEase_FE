@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+.nav-border {
+  border-bottom-width: 3px;
+  border-image: linear-gradient(90deg, #FF9A2C 50%,  #6D5ADF 50%)1;
+}

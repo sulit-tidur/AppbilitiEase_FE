@@ -1,20 +1,29 @@
+import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Footer from '@/components/Footer/Footer'
+import { getServerSession } from 'next-auth'
+import { authOptions } from './api/auth/[...nextauth]/route'
 
 export const metadata = {
   title: 'AppbilitiEase'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const session = await getServerSession(authOptions)
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Navbar session={session} />
+        <main className=''>
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   )
 }
