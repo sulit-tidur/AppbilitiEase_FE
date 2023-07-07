@@ -11,6 +11,7 @@ const EducationSection = () => {
       <div className="flex w-full gap-6 pb-[25px] overflow-x-auto rounded-[30px]">
         {educations.map((education, index) => (
           <EducationCard
+            key={index}
             education={education}
             type={index % 3}
           />
