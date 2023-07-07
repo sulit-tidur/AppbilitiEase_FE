@@ -104,10 +104,10 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
               <Link href={'/'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
                 Beranda
               </Link>
-              <Link href={'/cari-fasilitas'} className="py-2 px-6 transition hover:bg-white/20">
+              <Link href={'/cari-fasilitas'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
                 Cari Fasilitas
               </Link>
-              <Link href={'/edukasi-berita'} className="py-2 px-6 transition hover:bg-white/20">
+              <Link href={'/edukasi-berita'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
                 Edukasi & Berita
               </Link>
             </div>
