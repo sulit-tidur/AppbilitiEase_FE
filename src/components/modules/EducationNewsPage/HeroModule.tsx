@@ -18,14 +18,14 @@ const HeroModule = () => {
           width={666} height={666} alt="Edukasi & Berita" ref={titleRef}
           className={`
             transition duration-1000
-            ${titleOnScreen ? 'translate-y-0' : 'motion-safe:translate-y-full'}
+            ${titleOnScreen ? 'opacity-100 translate-y-0' : 'opacity-0 motion-safe:translate-y-1/2'}
           `}
         />
         <p
           className={`
             absolute bottom-0 text-2xl xxs:text-3xl xs:text-5xl sm:text-[60px] md:text-[65px] lg:text-[70px] font-extrabold text-dark
             transition duration-1000 motion-safe:delay-300 -translate-y-[150%]
-            ${titleOnScreen ? 'opacity-100 -translate-y-[150%]' : 'opacity-0 motion-safe:translate-y-full'}
+            ${titleOnScreen ? 'opacity-100 -translate-y-[150%]' : 'opacity-0 motion-safe:translate-y-1/2'}
           `}
         >
           Edukasi & Berita
