@@ -90,23 +90,23 @@ export const educations: Education[] = [
 export const news: News[] = [
   {
     image: '/images/pacil-lg.svg',
-    title: 'Judul Berita',
+    title: 'Judul Berita 1',
     content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit. Tincidunt donec vulputate ipsum erat urna auctor.',
-    href: '/edukasi-berita',
+    href: '/edukasi-berita/berita/1',
     date: '2023-01-01'
   },
   {
     image: '/images/pacil-lg.svg',
-    title: 'Judul Berita',
+    title: 'Judul Berita 2',
     content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit. Tincidunt donec vulputate ipsum erat urna auctor.',
-    href: '/edukasi-berita',
+    href: '/edukasi-berita/berita/2',
     date: '2023-01-01'
   },
   {
     image: '/images/pacil-lg.svg',
-    title: 'Judul Berita',
+    title: 'Judul Berita 3',
     content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit. Tincidunt donec vulputate ipsum erat urna auctor.',
-    href: '/edukasi-berita',
+    href: '/edukasi-berita/berita/3',
     date: '2023-01-01'
   }
 ]
