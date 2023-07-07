@@ -1,7 +1,7 @@
-import EdukasiBeritaModule from "@/components/modules/EdukasiBerita/EdukasiBeritaModule";
+import EducationNewsModule from "@/components/modules/EducationNewsPage/EducationNewsModule";
 
-export default function EdukasiBerita() {
+export default function EducationNews() {
   return (
-    <EdukasiBeritaModule />
+    <EducationNewsModule />
   )
 }
