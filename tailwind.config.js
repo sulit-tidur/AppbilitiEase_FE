@@ -26,9 +26,16 @@ module.exports = {
         'orange': '#FF9A2C',
         'cream': '#FDF8EE',
         'rose': '#FE5A5D',
-        'light-blue': '#E9F7FF'
+        'light-blue': '#E9F7FF',
+        'blue': '#199EEB',
+        'pink': '#FFE1DB',
+        'violet': '#E5E0FF',
+        'light-purple': '#7358FF',
+        'light-yellow': '#FFF3CA',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true })
+  ],
 }

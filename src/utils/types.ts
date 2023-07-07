@@ -15,3 +15,17 @@ export interface Developer {
   instagram: string
   linkedin: string
 }
+
+export interface Education {
+  image: string
+  content: string
+  href: string
+}
+
+export interface News {
+  image: string
+  title: string
+  content: string
+  href: string
+  date: string
+}
