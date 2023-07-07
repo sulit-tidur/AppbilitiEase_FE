@@ -21,7 +21,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
         ${type === 2 && 'bg-pink'}
       `}
     >
-      <div className="rounded-[14px] overflow-hidden w-[175px] md:w-[250px] xl:w-[438px]">
+      <div className="rounded-[14px] overflow-hidden isolate w-[175px] md:w-[250px] xl:w-[438px]">
         <Image
           src={education.image}
           width={438} height={355} alt="Fasilkom UI"

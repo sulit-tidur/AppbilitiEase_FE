@@ -8,7 +8,7 @@ const EducationSection = () => {
       <h1 className="text-5xl font-semibold text-dark">
         Edukasi
       </h1>
-      <div className="flex w-full gap-6 pb-[25px] overflow-x-auto rounded-[30px]">
+      <div className="flex w-full gap-6 pb-[25px] overflow-x-auto isolate rounded-[30px]">
         {educations.map((education, index) => (
           <EducationCard
             key={index}
