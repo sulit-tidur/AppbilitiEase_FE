@@ -1,10 +1,10 @@
-import { Education } from '@/utils/types'
+import { Article } from '@/utils/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 interface EducationCardProps {
-  education: Education
+  education: Article
   type: number
 }
 
@@ -32,7 +32,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
         {education.content}
       </p>
       <Link
-        href={education.href}
+        href={'/'}
         className={`
           absolute bottom-0 translate-y-1/2 motion-safe:hover:translate-y-[40%] transition
           px-10 py-2 text-white self-center rounded-full flex gap-[4px] items-center

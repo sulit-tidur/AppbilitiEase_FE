@@ -24,10 +24,8 @@ const getFacilities = async (params: GetFacilitiesParams = {}) => {
     const { data } = await axios.get(
       `${process.env.NEXT_PUBLIC_BE_URL}/api/facility?${queries}`
     )
-
     return data.data as Facility[]
   } catch (err) {
-    console.log(err)
     return []
   }
 }

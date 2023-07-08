@@ -1,12 +1,12 @@
 'use client'
 
-import { News } from '@/utils/types'
+import { Article } from '@/utils/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 interface NewsCardProps {
-  news: News
+  news: Article
   type: number
 }
 
@@ -31,9 +31,6 @@ const NewsCard: React.FC<NewsCardProps> = ({
         />
       </div>
       <div className='flex flex-col flex-1 gap-4'>
-        <p>
-          {new Date(news.date).toLocaleDateString('id', { month: 'long', day: 'numeric', year: 'numeric' })}
-        </p>
         <h1 className='text-2xl font-semibold text-dark'>
           {news.title}
         </h1>
@@ -41,7 +38,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
           {news.content}
         </p>
         <Link
-          href={news.href}
+          href={'/'}
           className={`
           self-center md:self-start w-fit motion-safe:hover:-translate-y-1 hover:shadow-md transition
           px-4 py-2 lg:px-8 lg:py-4 rounded-full flex gap-[4px] items-center bg-white
