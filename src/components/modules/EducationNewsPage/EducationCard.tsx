@@ -32,7 +32,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
         {education.content}
       </p>
       <Link
-        href={'/'}
+        href={`/edukasi-berita/${education.id}`}
         className={`
           absolute bottom-0 translate-y-1/2 motion-safe:hover:translate-y-[40%] transition
           px-10 py-2 text-white self-center rounded-full flex gap-[4px] items-center

@@ -38,7 +38,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
           {news.content}
         </p>
         <Link
-          href={'/'}
+          href={`/edukasi-berita/${news.id}`}
           className={`
           self-center md:self-start w-fit motion-safe:hover:-translate-y-1 hover:shadow-md transition
           px-4 py-2 lg:px-8 lg:py-4 rounded-full flex gap-[4px] items-center bg-white
