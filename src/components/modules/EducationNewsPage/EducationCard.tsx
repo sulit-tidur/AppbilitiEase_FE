@@ -1,7 +1,7 @@
-import { Education } from "@/utils/types"
-import Image from "next/image"
-import Link from "next/link"
-import { IoIosArrowDroprightCircle } from "react-icons/io"
+import { Education } from '@/utils/types'
+import Image from 'next/image'
+import Link from 'next/link'
+import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 interface EducationCardProps {
   education: Education
@@ -21,14 +21,14 @@ const EducationCard: React.FC<EducationCardProps> = ({
         ${type === 2 && 'bg-pink'}
       `}
     >
-      <div className="rounded-[14px] overflow-hidden isolate w-[175px] md:w-[250px] xl:w-[438px]">
+      <div className='rounded-[14px] overflow-hidden isolate w-[175px] md:w-[250px] xl:w-[438px]'>
         <Image
           src={education.image}
-          width={438} height={355} alt="Fasilkom UI"
-          className="w-full aspect-[438/355] object-cover rounded-[14px] transition motion-safe:group-hover:scale-105"
+          width={438} height={355} alt='Fasilkom UI'
+          className='w-full aspect-[438/355] object-cover rounded-[14px] transition motion-safe:group-hover:scale-105'
         />
       </div>
-      <p className="font-normal w-full text-lg text-dark line-clamp-3">
+      <p className='w-full text-lg font-normal text-dark line-clamp-3'>
         {education.content}
       </p>
       <Link

@@ -39,7 +39,7 @@ const SearchSection = () => {
               motion-reduce:peer-focus:opacity-100
             `}
           >
-            <p className="p-4 px-14 md:px-20 text-white font-medium">
+            <p className="p-4 font-medium text-white px-14 md:px-20">
               Cari
             </p>
           </button>

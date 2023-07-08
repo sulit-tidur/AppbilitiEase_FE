@@ -1,5 +1,5 @@
-import { RefObject } from "react";
-import { create } from "zustand"
+import { RefObject } from 'react'
+import { create } from 'zustand'
 
 interface LandingRefProps {
   nearestFacilityRef: RefObject<HTMLElement> | null

@@ -1,12 +1,12 @@
 'use client'
 
-import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
-import useLandingRef from "@/components/hooks/useLandingRef"
-import { nunito, poppins, roboto } from "@/utils/fonts"
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect, useRef } from "react"
-import { IoIosArrowDroprightCircle } from "react-icons/io"
+import { useElementOnScreen } from '@/components/hooks/useElementOnScreen'
+import useLandingRef from '@/components/hooks/useLandingRef'
+import { nunito, poppins, roboto } from '@/utils/fonts'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useRef } from 'react'
+import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const EducationModule = () => {
 
@@ -15,6 +15,7 @@ const EducationModule = () => {
 
   useEffect(() => {
     landingPageRef.setEducationNewsRef(educationNewsRef)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [educationNewsRef])
 
   const orangFirstRef = useRef(null)
@@ -27,30 +28,30 @@ const EducationModule = () => {
   const beritaOnScreen = useElementOnScreen({ ref: beritaRef })
 
   return (
-    <section ref={educationNewsRef} className="h-fit bg-cream">
-      <div className="container mx-auto px-4 py-14 md:max-w-[calc(100%-100px)]">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-x-20 gap-y-14">
+    <section ref={educationNewsRef} className='h-fit bg-cream'>
+      <div className='container mx-auto px-4 py-14 md:max-w-[calc(100%-100px)]'>
+        <div className='flex flex-col-reverse items-center justify-center md:flex-row gap-x-20 gap-y-14'>
           {/* Education & News Illustration */}
           <Image
             src={'/images/group-gambar-section-3.svg'}
-            width={614} height={635} alt="Edukasi dan Berita" ref={orangFirstRef}
+            width={614} height={635} alt='Edukasi dan Berita' ref={orangFirstRef}
             className={`
               block sm:hidden lg:block w-[300px] lg:w-[450px] xl:w-[614px] transition duration-1000
               ${orangFirstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}
             `}
           />
-          <div className="flex flex-col gap-14">
+          <div className='flex flex-col gap-14'>
             {/* Title */}
             <div className={`${poppins.className} w-fit max-w-[700px]`}>
-              <h1 className="text-5xl font-semibold text-dark">
-                Dapatkan <span className="text-rose">Edukasi</span> dan <span className="text-orange">Berita</span> Seputar Disabilitas
+              <h1 className='text-5xl font-semibold text-dark'>
+                Dapatkan <span className='text-rose'>Edukasi</span> dan <span className='text-orange'>Berita</span> Seputar Disabilitas
               </h1>
             </div>
 
-            <div className="flex gap-4">
+            <div className='flex gap-4'>
               <Image
                 src={'/images/group-gambar-section-3.svg'}
-                width={614} height={635} alt="Edukasi dan Berita" ref={orangSecondRef}
+                width={614} height={635} alt='Edukasi dan Berita' ref={orangSecondRef}
                 className={`
                   hidden sm:block lg:hidden w-[300px] transition duration-1000
                   ${orangSecondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:-translate-x-10'}
@@ -68,14 +69,14 @@ const EducationModule = () => {
                 >
                   <Image
                     src={'/images/edukasi-icon-2.svg'}
-                    width={101} height={101} alt="Edukasi"
-                    className="rounded-[23px]"
+                    width={101} height={101} alt='Edukasi'
+                    className='rounded-[23px]'
                   />
                   <div>
-                    <h5 className="font-medium text-2xl">
+                    <h5 className='text-2xl font-medium'>
                       Edukasi
                     </h5>
-                    <p className="font-normal text-neutral-400">
+                    <p className='font-normal text-neutral-400'>
                       Very Contrary to popular belief, Lorem Ipsum is not simply random text.
                     </p>
                   </div>
@@ -91,14 +92,14 @@ const EducationModule = () => {
                 >
                   <Image
                     src={'/images/berita-icon.svg'}
-                    width={101} height={101} alt="Edukasi"
-                    className="rounded-[23px]"
+                    width={101} height={101} alt='Edukasi'
+                    className='rounded-[23px]'
                   />
                   <div>
-                    <h5 className="font-medium text-2xl">
+                    <h5 className='text-2xl font-medium'>
                       Berita
                     </h5>
-                    <p className="font-normal text-neutral-400">
+                    <p className='font-normal text-neutral-400'>
                       Very Contrary to popular belief, Lorem Ipsum is not simply random text.
                     </p>
                   </div>

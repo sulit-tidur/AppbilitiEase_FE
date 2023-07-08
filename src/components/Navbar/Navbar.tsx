@@ -1,14 +1,14 @@
 'use client'
 
-import { nunito } from "@/utils/fonts"
-import Logo from "../Logo/Logo"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useCallback, useEffect, useMemo, useState } from "react"
-import { PiSignInBold, PiSignOutBold } from "react-icons/pi"
-import { BiSolidChevronDown } from "react-icons/bi"
-import useOutsideClick from "../hooks/useOutsideClick"
-import { signOut } from "next-auth/react"
+import { nunito } from '@/utils/fonts'
+import Logo from '../Logo/Logo'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { PiSignInBold, PiSignOutBold } from 'react-icons/pi'
+import { BiSolidChevronDown } from 'react-icons/bi'
+import useOutsideClick from '../hooks/useOutsideClick'
+import { signOut } from 'next-auth/react'
 
 interface NavbarProps {
   session: any
@@ -72,9 +72,9 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
         ${scrolled ? 'bg-white shadow-md' : 'bg-transparent shadow-none'}
       `}
     >
-      <div className="container mx-auto p-4 flex place-content-between items-center gap-6">
+      <div className='container flex items-center gap-6 p-4 mx-auto place-content-between'>
         <Logo />
-        <div className="hidden md:flex gap-10 text-dark">
+        <div className='hidden gap-10 md:flex text-dark'>
           <Link href={'/'} className={`${pathLabel === 'Beranda' && 'nav-border'}`}>
             Beranda
           </Link>
@@ -91,9 +91,9 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
               if (!visible) setVisible(true)
               else handleClose()
             }}
-            className="flex items-center"
+            className='flex items-center'
           >
-            <p className="font-bold">
+            <p className='font-bold'>
               {pathLabel}
             </p>
             <BiSolidChevronDown size={20} className={`absolute -right-4 transition duration-300 ${isOpen && 'motion-safe:rotate-180'}`} />
@@ -104,41 +104,41 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
               ${isOpen ? 'h-[124px]' : 'motion-safe:h-0 motion-reduce:opacity-0'}
             `}
             >
-              <Link href={'/'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
+              <Link href={'/'} onClick={handleClose} className='px-6 py-2 transition hover:bg-white/20'>
                 Beranda
               </Link>
-              <Link href={'/cari-fasilitas'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
+              <Link href={'/cari-fasilitas'} onClick={handleClose} className='px-6 py-2 transition hover:bg-white/20'>
                 Cari Fasilitas
               </Link>
-              <Link href={'/edukasi-berita'} onClick={handleClose} className="py-2 px-6 transition hover:bg-white/20">
+              <Link href={'/edukasi-berita'} onClick={handleClose} className='px-6 py-2 transition hover:bg-white/20'>
                 Edukasi & Berita
               </Link>
             </div>
           }
         </div>
-        <div className="flex gap-2">
+        <div className='flex gap-2'>
           {!session &&
             <Link
               href={'/login'}
-              className="
+              className='
               text-purple font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-purple hover:text-white transition
-            "
+            '
             >
-              <p className="hidden xs:block">Masuk</p>
-              <PiSignInBold size={20} className="block xs:hidden" />
+              <p className='hidden xs:block'>Masuk</p>
+              <PiSignInBold size={20} className='block xs:hidden' />
             </Link>
           }
           {session &&
             <button
               onClick={() => signOut()}
-              className="
+              className='
               text-rose font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-rose hover:text-white transition
-            "
+            '
             >
-              <p className="hidden xs:block">Keluar</p>
-              <PiSignOutBold size={20} className="block xs:hidden" />
+              <p className='hidden xs:block'>Keluar</p>
+              <PiSignOutBold size={20} className='block xs:hidden' />
             </button>
           }
         </div>

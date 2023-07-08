@@ -1,9 +1,9 @@
 'use client'
 
-import { useElementOnScreen } from "@/components/hooks/useElementOnScreen"
-import { nunito } from "@/utils/fonts"
-import Image from "next/image"
-import { useRef } from "react"
+import { useElementOnScreen } from '@/components/hooks/useElementOnScreen'
+import { nunito } from '@/utils/fonts'
+import Image from 'next/image'
+import { useRef } from 'react'
 
 const HeroModule = () => {
 
@@ -12,10 +12,10 @@ const HeroModule = () => {
 
   return (
     <section className={`${nunito.className} bg-[url(/images/bg/bg-edukasi-berita.svg)] bg-center bg-cover bg-no-repeat h-fit flex`}>
-      <div className="mt-[88px] md:mt-[93px] relative flex w-full justify-center overflow-hidden">
+      <div className='mt-[88px] md:mt-[93px] relative flex w-full justify-center overflow-hidden'>
         <Image
           src={'/images/bg/circle-edukasi-berita.svg'}
-          width={666} height={666} alt="Edukasi & Berita" ref={titleRef}
+          width={666} height={666} alt='Edukasi & Berita' ref={titleRef}
           className={`
             transition duration-1000
             ${titleOnScreen ? 'opacity-100 translate-y-0' : 'opacity-0 motion-safe:translate-y-1/2'}

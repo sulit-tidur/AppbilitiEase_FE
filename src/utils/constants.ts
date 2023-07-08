@@ -1,4 +1,4 @@
-import { Developer, Education, Facility, News } from "./types"
+import { Developer, Education, Facility, News } from './types'
 
 export const facilities: Facility[] = [
   {
