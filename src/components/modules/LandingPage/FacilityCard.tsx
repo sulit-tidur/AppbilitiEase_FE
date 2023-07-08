@@ -10,7 +10,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   facility
 }) => {
   return (
-    <div className='bg-white p-4 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg transition duration-300 hover:shadow-xl flex flex-col gap-2 relative group'>
+    <div className='h-full bg-white p-4 pb-[40px] rounded-[14px] max-w-[480px] shadow-lg transition duration-300 hover:shadow-xl flex flex-col gap-2 relative group'>
       {/* Facility Picture */}
       <div className='rounded-[14px] overflow-hidden isolate'>
         <Image
@@ -39,7 +39,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
       <hr className='border-dashed border-[1px] border-neutral-300' />
 
       {/* Description */}
-      <p className='text-xs font-normal'>
+      <p className='text-xs font-normal line-clamp-3'>
         {facility.description}
       </p>
 
