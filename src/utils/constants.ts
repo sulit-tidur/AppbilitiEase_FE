@@ -1,29 +1,5 @@
 import { Developer } from './types'
 
-export const facilities = [
-  {
-    title: 'Fakultas Ilmu Komputer UI',
-    description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old....',
-    location: 'Depok, Indonesia',
-    src: '/images/pacil.svg',
-    href: '/'
-  },
-  {
-    title: 'Fakultas Ilmu Komputer UI',
-    description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old....',
-    location: 'Depok, Indonesia',
-    src: '/images/pacil.svg',
-    href: '/'
-  },
-  {
-    title: 'Fakultas Ilmu Komputer UI',
-    description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old....',
-    location: 'Depok, Indonesia',
-    src: '/images/pacil.svg',
-    href: '/'
-  }
-]
-
 export const developers: Developer[] = [
   {
     name: 'Muhammad Hadziq Razin',

@@ -14,7 +14,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
       {/* Facility Picture */}
       <div className='rounded-[14px] overflow-hidden isolate'>
         <Image
-          src={facility.src}
+          src={facility.image}
           width={464} height={238} alt='Fasilitas Terdekat'
           className='motion-safe:group-hover:scale-105 transition w-full aspect-[232/119] object-cover rounded-[14px]'
         />
@@ -33,7 +33,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
 
       {/* Title */}
       <h3 className='text-lg font-semibold'>
-        {facility.title}
+        {facility.name}
       </h3>
 
       <hr className='border-dashed border-[1px] border-neutral-300' />
@@ -45,7 +45,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
 
       {/* Details Button */}
       <Link
-        href={facility.href}
+        href={'/'}
         className='
           text-lg font-normal text-white bg-rose w-fit self-center py-2 px-10 rounded-full
           translate-y-1/2 absolute bottom-0 motion-safe:hover:translate-y-[40%] transition
