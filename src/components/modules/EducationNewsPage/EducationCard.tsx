@@ -28,7 +28,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
           className='w-full aspect-[438/355] object-cover rounded-[14px] transition motion-safe:group-hover:scale-105'
         />
       </div>
-      <p className='w-full text-lg font-normal text-dark line-clamp-3'>
+      <p className='w-full text-lg font-normal break-all whitespace-pre-wrap text-dark line-clamp-3'>
         {education.content}
       </p>
       <Link
