@@ -1,6 +1,6 @@
-import { Developer, Education, Facility, News } from './types'
+import { Developer } from './types'
 
-export const facilities: Facility[] = [
+export const facilities = [
   {
     title: 'Fakultas Ilmu Komputer UI',
     description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old....',
@@ -54,7 +54,7 @@ export const developers: Developer[] = [
   }
 ]
 
-export const educations: Education[] = [
+export const educations = [
   {
     image: '/images/pacil-lg.svg',
     content: 'Tincidunt donec vulputate ipsum erat urna auctor. Eget phasellus ideirs.adipiscing elit.',
@@ -87,7 +87,7 @@ export const educations: Education[] = [
   }
 ]
 
-export const news: News[] = [
+export const news = [
   {
     image: '/images/pacil-lg.svg',
     title: 'Judul Berita 1',
