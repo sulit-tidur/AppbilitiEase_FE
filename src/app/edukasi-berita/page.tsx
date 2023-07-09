@@ -14,7 +14,6 @@ export default async function EducationNews() {
   const educations = educationsResult.status === 'fulfilled' ? educationsResult.value : []
   const news = newsResults.status === 'fulfilled' ? newsResults.value : []
 
-
   const handleSearch = async (value: string) => {
     'use server'
     console.log(value)
