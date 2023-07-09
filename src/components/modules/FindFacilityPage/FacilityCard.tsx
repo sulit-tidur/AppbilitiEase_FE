@@ -12,7 +12,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   return (
     <div className='relative flex flex-col lg:flex-row w-full max-w-[1344px] lg:max-h-[420px] gap-x-10 gap-y-2 p-4 pb-[40px] lg:pb-4 border-2 rounded-[19px] bg-white shadow-xl group'>
       {/* Image */}
-      <div className='rounded-[10px] overflow-hidden isolate'>
+      <div className='flex-1 rounded-[10px] overflow-hidden isolate'>
         <Image
           src={facility.image}
           width={548} height={365} alt='Gambar Fasilitas'
@@ -21,7 +21,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
       </div>
 
       {/* Content */}
-      <div className='max-w-[685px] flex flex-col gap-2 lg:relative'>
+      <div className='flex flex-col flex-1 gap-2 lg:relative'>
         {/* Name & Stars */}
         <div className='flex flex-wrap place-content-between gap-x-4'>
           <h3 className='text-xl font-semibold'>
