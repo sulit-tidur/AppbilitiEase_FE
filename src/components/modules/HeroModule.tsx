@@ -7,17 +7,18 @@ import { useRef } from 'react'
 
 interface HeroModuleProps {
   title: string
+  bg: string
 }
 
 const HeroModule: React.FC<HeroModuleProps> = ({
-  title
+  title, bg
 }) => {
 
   const titleRef = useRef(null)
   const titleOnScreen = useElementOnScreen({ ref: titleRef })
-
+  console.log(bg)
   return (
-    <section className={`${nunito.className} bg-[url(/images/bg/bg-edukasi-berita.svg)] bg-center bg-cover bg-no-repeat h-fit flex`}>
+    <section className={`${nunito.className} ${bg} bg-center bg-cover bg-no-repeat h-fit flex`}>
       <div className='mt-[88px] md:mt-[93px] relative flex w-full justify-center overflow-hidden'>
         <Image
           src={'/images/bg/circle-edukasi-berita.svg'}

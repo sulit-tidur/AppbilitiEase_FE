@@ -13,7 +13,7 @@ export default async function EducationNews() {
 
   return (
     <>
-      <HeroModule title='Edukasi & Berita' />
+      <HeroModule title='Edukasi & Berita' bg='bg-[url(/images/bg/bg-edukasi-berita.svg)]' />
       <BodyModule educations={educations} news={news} />
     </>
   )
