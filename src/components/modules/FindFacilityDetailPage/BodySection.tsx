@@ -76,7 +76,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
           ) : (
 
             <div className='flex flex-col gap-6 mt-4 md:mt-8'>
-              {facility.review.map((review) => (
+              {facility.review.sort((a, b) => b.id - a.id).map((review) => (
                 <ReviewCard key={review.id} review={review} />
               ))}
             </div>
