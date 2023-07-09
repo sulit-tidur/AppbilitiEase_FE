@@ -16,7 +16,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
   facility
 }) => {
 
-  const session = await useAuth()
+  const auth = await useAuth()
 
   return (
     <section className='container flex flex-col px-4 mx-auto pb-14'>
@@ -79,7 +79,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
             </div>
           </div>
 
-          <ReviewForm session={session} id={facility.id} />
+          <ReviewForm auth={auth} id={facility.id} />
 
           {facility.review.length === 0 ? (
 

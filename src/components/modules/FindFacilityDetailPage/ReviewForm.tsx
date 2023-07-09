@@ -2,6 +2,7 @@
 
 import ButtonRating from '@/components/modules/FindFacilityDetailPage/ButtonRating'
 import axios from 'axios'
+import { signOut } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -10,13 +11,19 @@ import { toast } from 'react-hot-toast'
 import { BeatLoader } from 'react-spinners'
 
 interface ReviewFormProps {
-  session: any
+  auth: any
   id: number
 }
 
 const ReviewForm: React.FC<ReviewFormProps> = ({
-  session, id
+  auth, id
 }) => {
+  const { session, unAuthorized } = auth
+
+  if (unAuthorized) {
+    toast.error('Sesi kamu telah berakhir. Silakan login lagi ya :)')
+    signOut()
+  }
 
   const [description, setDescription] = useState('')
   const [rating, setRating] = useState(1)
@@ -32,13 +39,28 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
     e.preventDefault()
     setLoading(true)
 
-    if (!session) {
-      return
-    }
-
-    const { access_token } = session
-
     try {
+      const { unAuthorized, undHandledError } = auth
+
+      if (!session) {
+        toast.error('Login terlebih dahulu ya :)')
+        setLoading(false)
+        return
+      }
+
+      if (unAuthorized) {
+        toast.error('Sesi kamu telah berakhir. Silakan login lagi ya :)')
+        signOut()
+        setLoading(false)
+        return
+      }
+
+      if (undHandledError) {
+        throw new Error()
+      }
+
+      const { access_token } = session
+
       const res = await axios.post(`${process.env.NEXT_PUBLIC_BE_URL}/api/facility/review`,
         {
           description,
@@ -60,7 +82,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
       setDescription('')
 
     } catch (err) {
-      toast.error('Terjadi kesalahan. Coba beberapa saat lagi.')
+      toast.error('Terjadi kesalahan :( Coba beberapa saat lagi.')
     }
 
     setLoading(false)
