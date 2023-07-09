@@ -1,5 +1,5 @@
 import BodyModule from '@/components/modules/EducationNewsPage/BodyModule'
-import HeroModule from '@/components/modules/EducationNewsPage/HeroModule'
+import HeroModule from '@/components/modules/HeroModule'
 import getArticles from '@/utils/actions/getArticles'
 
 export default async function EducationNews() {
@@ -13,7 +13,7 @@ export default async function EducationNews() {
 
   return (
     <>
-      <HeroModule />
+      <HeroModule title='Edukasi & Berita' />
       <BodyModule educations={educations} news={news} />
     </>
   )

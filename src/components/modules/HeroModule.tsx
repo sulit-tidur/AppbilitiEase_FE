@@ -5,7 +5,13 @@ import { nunito } from '@/utils/fonts'
 import Image from 'next/image'
 import { useRef } from 'react'
 
-const HeroModule = () => {
+interface HeroModuleProps {
+  title: string
+}
+
+const HeroModule: React.FC<HeroModuleProps> = ({
+  title
+}) => {
 
   const titleRef = useRef(null)
   const titleOnScreen = useElementOnScreen({ ref: titleRef })
@@ -28,7 +34,7 @@ const HeroModule = () => {
             ${titleOnScreen ? 'opacity-100 -translate-y-[150%]' : 'opacity-0 motion-safe:translate-y-1/2'}
           `}
         >
-          Edukasi & Berita
+          {title}
         </p>
       </div>
     </section>
