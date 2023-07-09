@@ -3,13 +3,20 @@
 import { FormEvent, useRef, useState } from "react"
 import { PiMagnifyingGlassBold } from "react-icons/pi"
 
-const SearchSection = () => {
+interface SearchSectionProps {
+  placeholder: string
+  action: (value: string) => void
+}
+
+const SearchSection: React.FC<SearchSectionProps> = ({
+  placeholder, action
+}) => {
   const [value, setValue] = useState<string>('')
   const ref = useRef<HTMLInputElement>(null)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(value)
+    action(value)
   }
 
   return (
@@ -23,7 +30,7 @@ const SearchSection = () => {
         >
           <PiMagnifyingGlassBold size={15} className="mx-4 xs:mx-0 xs:absolute xs:left-[20px]" />
           <input
-            type="text" placeholder="Cari edukasi atau berita.." ref={ref}
+            type="text" placeholder={placeholder} ref={ref}
             value={value} onChange={(e) => setValue(e.target.value)}
             className={`
             xs:focus:w-[calc(100%-102px)] cursor-pointer focus:cursor-text outline-none motion-reduce:w-[calc(100%-102px)] motion-reduce:pr-[107px] motion-reduce:md:pr-[157px]
