@@ -32,7 +32,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
             width={88} height={16} alt='Review Stars'
           />
         </div>
-        <p className='text-xl font-normal break-words whitespace-pre-wrap'>
+        <p className='font-normal break-words whitespace-pre-wrap text-content'>
           {review.description}
         </p>
       </div>

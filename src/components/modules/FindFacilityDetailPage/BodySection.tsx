@@ -4,6 +4,7 @@ import FindFacilitySection from './FindFacilitySection'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import ReviewCard from './ReviewCard'
 import FacilityMap from './FacilitiyMap'
+import ReviewForm from './ReviewForm'
 
 interface BodySectionProps {
   facility: Facility
@@ -60,10 +61,12 @@ const BodySection: React.FC<BodySectionProps> = ({
             Ulasan
           </h1>
 
+          <ReviewForm />
+
           {facility.review.length === 0 ? (
 
             <p className='font-normal text-content text-neutral-600'>
-              Fasilitas ini belum memiliki ulasan. Jadilah yang pertama :D
+              Fasilitas ini belum memiliki ulasan. Ayo, jadi yang pertama! :D
             </p>
 
           ) : (
