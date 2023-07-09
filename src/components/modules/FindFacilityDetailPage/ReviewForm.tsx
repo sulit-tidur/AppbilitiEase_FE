@@ -1,6 +1,6 @@
 'use client'
 
-import ButtonBintang from '@/components/modules/FindFacilityDetailPage/ButtonBintang'
+import ButtonRating from '@/components/modules/FindFacilityDetailPage/ButtonRating'
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -74,7 +74,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
           className='text-content w-full max-w-[1024px] p-4 border-2 rounded-[12px]'
         />
         <div className='w-full md:max-w-[300px] flex flex-col gap-6'>
-          <ButtonBintang value={rating} setValue={setRating} />
+          <ButtonRating value={rating} setValue={setRating} />
           {session &&
             <button
               type='submit'

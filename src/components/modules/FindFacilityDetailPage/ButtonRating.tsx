@@ -3,12 +3,12 @@
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 
-interface ButtonBintangProps {
+interface ButtonRatingProps {
   value: number
   setValue: Dispatch<SetStateAction<number>>
 }
 
-const ButtonBintang: React.FC<ButtonBintangProps> = ({
+const ButtonRating: React.FC<ButtonRatingProps> = ({
   value, setValue
 }) => {
 
@@ -53,4 +53,4 @@ const ButtonBintang: React.FC<ButtonBintangProps> = ({
   )
 }
 
-export default ButtonBintang
+export default ButtonRating
