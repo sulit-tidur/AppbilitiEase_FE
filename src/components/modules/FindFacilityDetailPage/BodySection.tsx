@@ -4,6 +4,7 @@ import FindFacilitySection from './FindFacilitySection'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import SectionHeader from './SectionHeader'
 import ReviewCard from './ReviewCard'
+import FacilityMap from './FacilitiyMap'
 
 interface BodySectionProps {
   facility: Facility
@@ -45,7 +46,7 @@ const BodySection: React.FC<BodySectionProps> = ({
         {/* Location */}
         <FindFacilitySection>
           <SectionHeader value='Lokasi' />
-
+          <FacilityMap position={[Number(facility.latitude), Number(facility.longitude)]} />
         </FindFacilitySection>
 
         <hr />
