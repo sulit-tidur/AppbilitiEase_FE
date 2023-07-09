@@ -1,17 +1,15 @@
 'use client'
 
 import { poppins } from '@/utils/fonts'
-import { Facility } from '@/utils/types'
 import { useRouter } from 'next/navigation'
 import { IoIosArrowDropleftCircle } from 'react-icons/io'
-import SectionHeader from './SectionHeader'
 
 interface HeroSectionProps {
-  facility: Facility
+  facilityName: string
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  facility
+  facilityName
 }) => {
   const router = useRouter()
   return (
@@ -26,7 +24,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             Kembali
           </p>
         </button>
-        <SectionHeader value={facility.name} />
+        <h1 className='font-semibold text-header text-dark'>
+          {facilityName}
+        </h1>
       </div>
     </section>
   )

@@ -46,14 +46,14 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
         <hr className='border-dashed border-[1px] border-neutral-300' />
 
         {/* Description */}
-        <p className='text-sm font-normal break-all whitespace-pre-wrap line-clamp-3 lg:line-clamp-4 xl:line-clamp-6'>
+        <p className='font-normal break-words whitespace-pre-wrap text-content-sm line-clamp-3 lg:line-clamp-4 xl:line-clamp-6'>
           {facility.description}
         </p>
 
         {/* Details Button */}
         <Link
           href={`/cari-fasilitas/${facility.id}`}
-          className='absolute bottom-0 self-center px-10 py-2 text-lg font-normal text-white transition rounded-full  lg:right-0 mt-14 bg-rose w-fit lg:hover:shadow-md translate-y-[50%] lg:translate-y-0 motion-safe:hover:translate-y-[40%] lg:motion-safe:hover:-translate-y-1'
+          className='absolute bottom-0 self-center px-10 py-2 text-lg font-normal text-white transition rounded-full lg:right-0 mt-14 bg-rose w-fit lg:hover:shadow-md translate-y-[50%] lg:translate-y-0 motion-safe:hover:translate-y-[40%] lg:motion-safe:hover:-translate-y-1'
         >
           Lihat
         </Link>

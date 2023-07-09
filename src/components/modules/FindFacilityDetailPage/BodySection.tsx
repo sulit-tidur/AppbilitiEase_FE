@@ -2,7 +2,6 @@ import { Facility } from '@/utils/types'
 import Image from 'next/image'
 import FindFacilitySection from './FindFacilitySection'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
-import SectionHeader from './SectionHeader'
 import ReviewCard from './ReviewCard'
 import FacilityMap from './FacilitiyMap'
 
@@ -25,7 +24,7 @@ const BodySection: React.FC<BodySectionProps> = ({
           />
           <div className='flex items-center gap-2 text-neutral-400'>
             <HiOutlineLocationMarker size={27} />
-            <p className='text-xl font-medium'>
+            <p className='font-medium text-content'>
               {facility.location}
             </p>
           </div>
@@ -35,8 +34,10 @@ const BodySection: React.FC<BodySectionProps> = ({
 
         {/* Description */}
         <FindFacilitySection>
-          <SectionHeader value='Deskripsi Tempat' />
-          <p className='text-lg font-normal break-all whitespace-pre-wrap md:text-2xl text-neutral-800'>
+          <h1 className='font-semibold text-header text-dark'>
+            Deskripsi Tempat
+          </h1>
+          <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-800'>
             {facility.description}
           </p>
         </FindFacilitySection>
@@ -45,7 +46,9 @@ const BodySection: React.FC<BodySectionProps> = ({
 
         {/* Location */}
         <FindFacilitySection>
-          <SectionHeader value='Lokasi' />
+          <h1 className='font-semibold text-header text-dark'>
+            Lokasi
+          </h1>
           <FacilityMap position={[Number(facility.latitude), Number(facility.longitude)]} />
         </FindFacilitySection>
 
@@ -53,12 +56,23 @@ const BodySection: React.FC<BodySectionProps> = ({
 
         {/* Reviews */}
         <FindFacilitySection>
-          <SectionHeader value='Ulasan' />
-          <div className='flex flex-col gap-6 mt-4 md:mt-8'>
-            {facility.review.map((review) => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
-          </div>
+          <h1 className='font-semibold text-header text-dark'>
+            Ulasan
+          </h1>
+          {facility.review.length === 0 ? (
+
+            <p className='font-normal text-content text-neutral-600'>
+              Fasilitas ini belum memiliki ulasan. Jadilah yang pertama :D
+            </p>
+
+          ) : (
+
+            <div className='flex flex-col gap-6 mt-4 md:mt-8'>
+              {facility.review.map((review) => (
+                <ReviewCard key={review.id} review={review} />
+              ))}
+            </div>
+          )}
         </FindFacilitySection>
       </div>
     </section>

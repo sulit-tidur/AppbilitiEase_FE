@@ -6,7 +6,7 @@ export default async function Fasilitas({ params }: { params: { id: string } }) 
   const facility = await getFacilities({ id: Number(params.id) })
   return (
     <>
-      <HeroSection facility={facility[0]} />
+      <HeroSection facilityName={facility[0].name} />
       <BodySection facility={facility[0]} />
     </>
   )

@@ -16,7 +16,7 @@ const BodySection: React.FC<BodySectionProps> = ({
           width={1200} height={560} alt='Gambar Artikel'
           className='aspect-[1200/560] w-full object-cover rounded-[20px]'
         />
-        <p className='text-xl font-normal break-all whitespace-pre-wrap text-neutral-600'>
+        <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-600'>
           {article.content}
         </p>
       </div>

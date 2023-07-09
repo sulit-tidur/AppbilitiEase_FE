@@ -17,7 +17,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
     <div
       className={`
         flex flex-col md:flex-row-reverse p-4 md:p-6 lg:p-10 xl:p-16 gap-x-10 gap-y-4 hover:shadow-lg duration-300
-        max-w-[300px] md:max-w-[1200px] rounded-[30px] relative group
+        w-full max-w-[300px] md:max-w-[1200px] rounded-[30px] relative group
         ${type === 0 && 'bg-light-blue'}
         ${type === 1 && 'bg-violet'}
         ${type === 2 && 'bg-pink'}
@@ -30,21 +30,21 @@ const NewsCard: React.FC<NewsCardProps> = ({
           className='w-full aspect-[453/355] object-cover rounded-[14px] transition motion-safe:group-hover:scale-105'
         />
       </div>
-      <div className='flex flex-col flex-1 gap-4'>
-        <h1 className='text-2xl font-semibold text-dark'>
+      <div className='relative flex flex-col flex-1 gap-4'>
+        <h1 className='font-semibold text-subheader text-dark'>
           {news.title}
         </h1>
-        <p className='w-full text-lg font-normal line-clamp-3 text-neutral-600'>
+        <p className='w-full font-normal break-words text-content line-clamp-3 text-neutral-600'>
           {news.content}
         </p>
         <Link
           href={`/edukasi-berita/${news.id}`}
           className={`
-          self-center md:self-start w-fit motion-safe:hover:-translate-y-1 hover:shadow-md transition
-          px-4 py-2 lg:px-8 lg:py-4 rounded-full flex gap-[4px] items-center bg-white
-        `}
+            self-center md:absolute md:left-0 md:bottom-0 w-fit motion-safe:hover:-translate-y-1 hover:shadow-md transition
+            px-4 py-2 lg:px-8 lg:py-4 rounded-full flex gap-[4px] items-center bg-white
+          `}
         >
-          <p className='text-lg font-normal'>
+          <p className='font-normal text-content'>
             Baca Berita
           </p>
           <IoIosArrowDroprightCircle

@@ -32,14 +32,14 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
       </div>
 
       {/* Title */}
-      <h3 className='text-lg font-semibold'>
+      <h3 className='font-semibold text-content'>
         {facility.name}
       </h3>
 
       <hr className='border-dashed border-[1px] border-neutral-300' />
 
       {/* Description */}
-      <p className='text-xs font-normal break-all whitespace-pre-wrap line-clamp-3'>
+      <p className='font-normal break-all whitespace-pre-wrap text-content-sm line-clamp-3'>
         {facility.description}
       </p>
 

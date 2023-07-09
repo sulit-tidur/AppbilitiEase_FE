@@ -17,6 +17,7 @@ const FacilityMap: React.FC<FacilityMapProps> = ({
     iconUrl: '/images/marker.png',
     iconSize: [50, 100]
   }), [])
+
   return (
     <div className='rounded-[15px] overflow-hidden isolate'>
       <MapContainer center={position} zoom={18} scrollWheelZoom={false}>
