@@ -1,6 +1,6 @@
 'use client'
 
-import ButtonBintang from '@/components/ButtonBintang'
+import ButtonBintang from '@/components/modules/FindFacilityDetailPage/ButtonBintang'
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
