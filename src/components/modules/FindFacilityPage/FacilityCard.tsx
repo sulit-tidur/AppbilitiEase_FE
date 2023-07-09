@@ -52,7 +52,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
 
         {/* Details Button */}
         <Link
-          href={'/'}
+          href={`/cari-fasilitas/${facility.id}`}
           className='absolute bottom-0 self-center px-10 py-2 text-lg font-normal text-white transition rounded-full  lg:right-0 mt-14 bg-rose w-fit lg:hover:shadow-md translate-y-[50%] lg:translate-y-0 motion-safe:hover:translate-y-[40%] lg:motion-safe:hover:-translate-y-1'
         >
           Lihat

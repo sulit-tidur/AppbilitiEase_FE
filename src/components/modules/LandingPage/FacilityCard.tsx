@@ -45,7 +45,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
 
       {/* Details Button */}
       <Link
-        href={'/'}
+        href={`/cari-fasilitas/${facility.id}`}
         className='
           text-lg font-normal text-white bg-rose w-fit self-center py-2 px-10 rounded-full
           translate-y-1/2 absolute bottom-0 motion-safe:hover:translate-y-[40%] transition

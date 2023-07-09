@@ -19,7 +19,7 @@ const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({
   }, [facilities])
 
   return (
-    <section className={`${poppins.className} flex flex-col items-center gap-8 pb-[40px] sm:px-14 md:gap-14`}>
+    <section className={`${poppins.className} flex flex-col items-center gap-8 pb-[40px] lg:pb-0 sm:px-14 md:gap-14`}>
       <div className='flex flex-col items-center w-full gap-14'>
         {facilitiesState.map((facility) => (
           <FacilityCard
