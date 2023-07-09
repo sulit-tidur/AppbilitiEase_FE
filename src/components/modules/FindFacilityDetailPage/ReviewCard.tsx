@@ -1,5 +1,6 @@
 import { Review } from '@/utils/types'
 import Image from 'next/image'
+import LabelRating from './LabelRating'
 
 interface ReviewCardProps {
   review: Review
@@ -27,10 +28,14 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           <h3 className='hidden text-xl font-medium text-dark xs:block'>
             {review.user}
           </h3>
-          <Image
+          <div className='w-[88px]'>
+            <LabelRating rating={review.rating} />
+          </div>
+          {review.rating}
+          {/* <Image
             src={'/images/stars.svg'}
             width={88} height={16} alt='Review Stars'
-          />
+          /> */}
         </div>
         <p className='font-normal break-words whitespace-pre-wrap text-content'>
           {review.description}

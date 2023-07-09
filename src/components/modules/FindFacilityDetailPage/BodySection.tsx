@@ -6,6 +6,7 @@ import ReviewCard from './ReviewCard'
 import FacilityMap from './FacilitiyMap'
 import ReviewForm from './ReviewForm'
 import useAuth from '@/components/hooks/useAuth'
+import LabelRating from './LabelRating'
 
 interface BodySectionProps {
   facility: Facility
@@ -61,9 +62,22 @@ const BodySection: React.FC<BodySectionProps> = async ({
 
         {/* Reviews */}
         <FindFacilitySection>
-          <h1 className='font-semibold text-header text-dark'>
-            Ulasan
-          </h1>
+          <div className='flex items-center place-content-between'>
+            <h1 className='font-semibold text-header text-dark'>
+              Ulasan
+            </h1>
+            <div className='flex items-center gap-2 md:gap-4'>
+              <div className='w-[25px] xs:hidden aspect-square'>
+                <Image src={'/images/bintang.svg'} width={25} height={25} alt='Bintang' className='w-full' />
+              </div>
+              <div className='hidden xs:block w-[150px] md:w-[200px] aspect-[88/16]'>
+                <LabelRating rating={facility.rating} />
+              </div>
+              <p className='font-normal text-subheader'>
+                {facility.rating.toFixed(1)}/5
+              </p>
+            </div>
+          </div>
 
           <ReviewForm session={session} id={facility.id} />
 
