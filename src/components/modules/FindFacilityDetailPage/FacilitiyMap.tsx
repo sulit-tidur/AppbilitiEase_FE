@@ -15,7 +15,7 @@ const FacilityMap: React.FC<FacilityMapProps> = ({
 
   const icon = useMemo(() => new Icon({
     iconUrl: '/images/marker.png',
-    iconSize: [50, 100]
+    iconSize: [75, 150]
   }), [])
 
   return (

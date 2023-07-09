@@ -46,7 +46,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
         <hr className='border-dashed border-[1px] border-neutral-300' />
 
         {/* Description */}
-        <p className='font-normal break-words whitespace-pre-wrap text-content-sm line-clamp-3 lg:line-clamp-4 xl:line-clamp-6'>
+        <p className='font-normal break-words whitespace-pre-wrap text-content-sm line-clamp-3 mb-[52px] lg:line-clamp-4 xl:line-clamp-6'>
           {facility.description}
         </p>
 

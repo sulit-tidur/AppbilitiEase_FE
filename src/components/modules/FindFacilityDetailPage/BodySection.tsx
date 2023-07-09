@@ -59,6 +59,7 @@ const BodySection: React.FC<BodySectionProps> = ({
           <h1 className='font-semibold text-header text-dark'>
             Ulasan
           </h1>
+
           {facility.review.length === 0 ? (
 
             <p className='font-normal text-content text-neutral-600'>
@@ -73,6 +74,7 @@ const BodySection: React.FC<BodySectionProps> = ({
               ))}
             </div>
           )}
+
         </FindFacilitySection>
       </div>
     </section>
