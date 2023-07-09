@@ -83,8 +83,8 @@ const BodySection: React.FC<BodySectionProps> = async ({
 
           {facility.review.length === 0 ? (
 
-            <p className='font-normal text-content text-neutral-600'>
-              Fasilitas ini belum memiliki ulasan. Ayo, jadi yang pertama! :D
+            <p className='font-normal text-center text-subheader mt-14 text-neutral-600'>
+              Fasilitas ini belum memiliki ulasan.<br />Ayo, jadi yang pertama! :D
             </p>
 
           ) : (
