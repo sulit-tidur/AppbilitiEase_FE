@@ -1,8 +1,11 @@
 import BodyModule from '@/components/modules/BodyModule'
+import FacilitiesSection from '@/components/modules/FindFacilityPage/FacilitiesSection'
 import HeroModule from '@/components/modules/HeroModule'
 import SearchSection from '@/components/modules/SearchSection'
+import getFacilities from '@/utils/actions/getFacilities'
 
 export default async function FindFacility() {
+  const facilities = await getFacilities()
 
   const handleSearch = async (value: string) => {
     'use server'
@@ -15,7 +18,7 @@ export default async function FindFacility() {
       <BodyModule>
         <SearchSection placeholder='Cari fasilitas..' action={handleSearch} />
         <hr />
-
+        <FacilitiesSection facilities={facilities} />
       </BodyModule>
     </>
   )
