@@ -5,7 +5,7 @@ import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { BeatLoader } from 'react-spinners'
 
@@ -23,6 +23,10 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
   const pathname = usePathname()
   const [loading, setLoading] = useState(false)
   const router = useRouter()
+
+  const empty = useMemo(() => {
+    return description === ''
+  }, [description])
 
   const submitReview = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -78,7 +82,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
           {session &&
             <button
               type='submit'
-              disabled={loading}
+              disabled={loading || empty}
               className='w-full p-4 transition rounded-full bg-purple disabled:cursor-not-allowed disabled:opacity-80 hover:shadow-lg motion-safe:hover:-translate-y-1'
             >
               <p className='font-medium text-center text-white text-content'>
