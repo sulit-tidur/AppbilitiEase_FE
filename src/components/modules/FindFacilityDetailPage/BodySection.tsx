@@ -74,7 +74,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
                 <LabelRating rating={facility.rating} />
               </div>
               <p className='font-normal text-subheader'>
-                {facility.rating.toFixed(1)}/5
+                {Number(facility.rating.toFixed(1))}/5
               </p>
             </div>
           </div>
