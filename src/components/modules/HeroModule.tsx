@@ -16,7 +16,7 @@ const HeroModule: React.FC<HeroModuleProps> = ({
 
   const titleRef = useRef(null)
   const titleOnScreen = useElementOnScreen({ ref: titleRef })
-  console.log(bg)
+
   return (
     <section className={`${nunito.className} ${bg} bg-center bg-cover bg-no-repeat h-fit flex`}>
       <div className='mt-[88px] md:mt-[93px] relative flex w-full justify-center overflow-hidden'>

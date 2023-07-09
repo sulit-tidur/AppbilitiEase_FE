@@ -5,14 +5,18 @@ import { HiOutlineLocationMarker } from 'react-icons/hi'
 import ReviewCard from './ReviewCard'
 import FacilityMap from './FacilitiyMap'
 import ReviewForm from './ReviewForm'
+import useAuth from '@/components/hooks/useAuth'
 
 interface BodySectionProps {
   facility: Facility
 }
 
-const BodySection: React.FC<BodySectionProps> = ({
+const BodySection: React.FC<BodySectionProps> = async ({
   facility
 }) => {
+
+  const session = await useAuth()
+
   return (
     <section className='container flex flex-col px-4 mx-auto pb-14'>
       <div className='-translate-y-[10vh] flex flex-col gap-4 md:gap-14'>
@@ -61,7 +65,7 @@ const BodySection: React.FC<BodySectionProps> = ({
             Ulasan
           </h1>
 
-          <ReviewForm />
+          <ReviewForm session={session} id={facility.id} />
 
           {facility.review.length === 0 ? (
 

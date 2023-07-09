@@ -4,12 +4,15 @@ import { useElementOnScreen } from '@/components/hooks/useElementOnScreen'
 import { poppins } from '@/utils/fonts'
 import { signIn } from 'next-auth/react'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
 import { useRef } from 'react'
 
 const LoginModule = () => {
 
   const ref = useRef(null)
   const isOnScreen = useElementOnScreen({ ref })
+  const params = useSearchParams()
+  const callbackUrl = params.get('callbackUrl') || '/'
 
   return (
     <section className={`${poppins.className} bg-[url(/images/bg/bg-login.svg)] bg-center bg-cover bg-no-repeat h-fit min-h-screen flex`}>
@@ -31,7 +34,7 @@ const LoginModule = () => {
               Berikan <span className='text-rose'>ulasan</span> dan <span className='text-orange'>penilaian</span> terhadap fasilitas yang pernah kamu kunjungi!
             </p>
             <button
-              onClick={() => signIn('google')}
+              onClick={() => signIn('google', { callbackUrl: callbackUrl })}
               className='
                 bg-light-blue py-[12px] px-[9px] flex items-center gap-2 justify-center rounded-[12px]
                 transition motion-safe:hover:-translate-y-1 hover:shadow-md
