@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             Kembali
           </p>
         </button>
-        <h1 className='text-5xl font-semibold text-dark'>
+        <h1 className='text-3xl font-semibold break-words sm:text-5xl text-dark'>
           {article.title}
         </h1>
       </div>
