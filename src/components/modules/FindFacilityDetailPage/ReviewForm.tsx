@@ -45,13 +45,15 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
           'Authorization': `Bearer ${access_token}`
         }
       })
-      console.log(res)
+
       if (res.status !== 201) {
         throw new Error()
       }
 
       toast.success('Ulasan telah dikirimkan. Terima kasih!')
       router.refresh()
+      setRating(1)
+      setDescription('')
 
     } catch (err) {
       toast.error('Terjadi kesalahan. Coba beberapa saat lagi.')
