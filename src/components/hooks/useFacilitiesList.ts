@@ -2,12 +2,12 @@ import { Facility } from '@/utils/types';
 import { create } from 'zustand';
 
 interface FacilitiesListProps {
-  facilities: Facility[]
+  facilities: Facility[] | null
   setFacilities: (facilities: Facility[]) => void
 }
 
 const useFacilitiesList = create<FacilitiesListProps>((set) => ({
-  facilities: [],
+  facilities: null,
   setFacilities: (facilities: Facility[]) => set({ facilities })
 }))
 

@@ -1,10 +1,11 @@
 'use client'
 
-import { poppins } from '@/utils/fonts';
+import { poppins } from '@/utils/fonts'
 import { Facility } from '@/utils/types'
-import { useEffect } from 'react';
-import FacilityCard from './FacilityCard';
-import useFacilitiesList from '@/components/hooks/useFacilitiesList';
+import { useEffect } from 'react'
+import FacilityCard from './FacilityCard'
+import useFacilitiesList from '@/components/hooks/useFacilitiesList'
+import { BeatLoader } from 'react-spinners'
 
 interface FacilitiesSectionProps {
   facilities: Facility[]
@@ -23,7 +24,10 @@ const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({
   return (
     <section className={`${poppins.className} flex flex-col items-center gap-8 pb-[40px] lg:pb-0 sm:px-14 md:gap-14`}>
       <div className='flex flex-col items-center w-full gap-14'>
-        {facilitiesList.facilities.map((facility) => (
+        {!facilitiesList.facilities &&
+          <BeatLoader color='#5842DB' size={20} />
+        }
+        {facilitiesList.facilities && facilitiesList.facilities.map((facility) => (
           <FacilityCard
             key={facility.id}
             facility={facility}
