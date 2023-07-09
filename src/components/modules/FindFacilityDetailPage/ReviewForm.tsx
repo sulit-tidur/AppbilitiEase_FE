@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { FormEvent, useState } from 'react'
 import { toast } from 'react-hot-toast'
+import { BeatLoader } from 'react-spinners'
 
 interface ReviewFormProps {
   session: any
@@ -75,10 +76,11 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
           {session &&
             <button
               type='submit'
-              className='w-full p-4 transition rounded-full bg-purple hover:shadow-lg motion-safe:hover:-translate-y-1'
+              disabled={loading}
+              className='w-full p-4 transition rounded-full bg-purple disabled:cursor-not-allowed disabled:opacity-80 hover:shadow-lg motion-safe:hover:-translate-y-1'
             >
               <p className='font-medium text-center text-white text-content'>
-                Kirim
+                {loading ? <BeatLoader color='#fff' /> : <>Kirim</>}
               </p>
             </button>
           }
