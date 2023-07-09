@@ -1,6 +1,7 @@
 'use client'
 
-import { FormEvent, useRef, useState } from "react"
+import { usePathname } from 'next/navigation'
+import { FormEvent, useMemo, useRef, useState } from "react"
 import { PiMagnifyingGlassBold } from "react-icons/pi"
 
 interface SearchSectionProps {
@@ -13,6 +14,14 @@ const SearchSection: React.FC<SearchSectionProps> = ({
 }) => {
   const [value, setValue] = useState<string>('')
   const ref = useRef<HTMLInputElement>(null)
+  const pathname = usePathname()
+
+  const long = useMemo(() => {
+    if (pathname === '/edukasi-berita') {
+      return true
+    }
+    return false
+  }, [pathname])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -34,7 +43,7 @@ const SearchSection: React.FC<SearchSectionProps> = ({
             value={value} onChange={(e) => setValue(e.target.value)}
             className={`
             xs:focus:w-[calc(100%-102px)] cursor-pointer focus:cursor-text outline-none motion-reduce:w-[calc(100%-102px)] motion-reduce:pr-[107px] motion-reduce:md:pr-[157px]
-            ${value === '' ? 'w-full xs:motion-safe:w-[195px] pr-0' : 'w-[calc(100%-102px)] pr-[107px] md:pr-[157px]'}
+            ${value === '' ? `w-full ${long ? 'xs:motion-safe:w-[195px]' : 'xs:motion-safe:w-[100px]'} pr-0` : 'w-[calc(100%-102px)] pr-[107px] md:pr-[157px]'}
             motion-safe:transition-all motion-safe:duration-1000 ease-out peer
             `}
           />
