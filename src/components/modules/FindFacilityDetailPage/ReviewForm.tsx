@@ -34,15 +34,15 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
     const { access_token } = session
 
     try {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_BE_URL}/api/facility/review`, {
-        headers: {
-          'Authorization': `Bearer ${access_token}`
-        },
-        body: {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_BE_URL}/api/facility/review`,
+        {
           description,
           rating,
           facility: id
-        },
+        }, {
+        headers: {
+          'Authorization': `Bearer ${access_token}`
+        }
       })
       console.log(res)
       if (res.status !== 201) {
