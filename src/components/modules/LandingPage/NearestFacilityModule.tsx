@@ -1,14 +1,19 @@
 'use client'
 
 import { poppins } from '@/utils/fonts'
-import { facilities } from '@/utils/constants'
 import FacilityCard from './FacilityCard'
 import { useEffect, useRef } from 'react'
 import { useElementOnScreen } from '@/components/hooks/useElementOnScreen'
 import useLandingRef from '@/components/hooks/useLandingRef'
+import { Facility } from '@/utils/types'
 
-const NearestFacilityModule = () => {
+interface NearestFacilityModuleProps {
+  facilities: Facility[]
+}
 
+const NearestFacilityModule: React.FC<NearestFacilityModuleProps> = ({
+  facilities
+}) => {
   const landingPageRef = useLandingRef()
   const nearestFacilityRef = useRef<HTMLElement>(null)
 
@@ -39,25 +44,36 @@ const NearestFacilityModule = () => {
           </div>
 
           {/* Facilities */}
+          {facilities.length === 0 && (
+            <p className='text-2xl font-medium text-center text-neutral-600'>
+              Oops, nampaknya tidak ada fasilitas yang terdaftar saat ini :(
+            </p>
+          )}
           <div className='flex flex-col md:flex-row gap-x-6 gap-y-14'>
-            <div
-              ref={first}
-              className={`transition duration-1000 ${firstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
-            >
-              <FacilityCard facility={facilities[0]} />
-            </div>
-            <div
-              ref={second}
-              className={`transition delay-100 duration-1000 ${secondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
-            >
-              <FacilityCard facility={facilities[1]} />
-            </div>
-            <div
-              ref={third}
-              className={`transition delay-200 duration-1000 ${thirdOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
-            >
-              <FacilityCard facility={facilities[2]} />
-            </div>
+            {facilities[0] &&
+              <div
+                ref={first}
+                className={`transition duration-1000 ${firstOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
+              >
+                <FacilityCard facility={facilities[0]} />
+              </div>
+            }
+            {facilities[1] &&
+              <div
+                ref={second}
+                className={`transition delay-100 duration-1000 ${secondOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
+              >
+                <FacilityCard facility={facilities[1]} />
+              </div>
+            }
+            {facilities[2] &&
+              <div
+                ref={third}
+                className={`transition delay-200 duration-1000 ${thirdOnScreen ? 'opacity-100 translate-x-0' : 'opacity-0 motion-safe:translate-x-10'}`}
+              >
+                <FacilityCard facility={facilities[2]} />
+              </div>
+            }
           </div>
         </div>
       </div>

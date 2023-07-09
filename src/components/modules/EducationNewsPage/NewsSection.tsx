@@ -1,8 +1,14 @@
 import { poppins } from '@/utils/fonts'
 import NewsCard from './NewsCard'
-import { news } from '@/utils/constants'
+import { Article } from '@/utils/types'
 
-const NewsSection = () => {
+interface NewsSectionProps {
+  news: Article[]
+}
+
+const NewsSection: React.FC<NewsSectionProps> = ({
+  news
+}) => {
   return (
     <section className={`${poppins.className} sm:px-14 flex flex-col gap-14 items-center`}>
       <h1 className='text-5xl font-semibold text-center text-dark'>
@@ -15,7 +21,7 @@ const NewsSection = () => {
       >
         {news.map((news, index) => (
           <NewsCard
-            key={index}
+            key={news.id}
             news={news}
             type={index % 3}
           />

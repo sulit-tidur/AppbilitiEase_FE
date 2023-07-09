@@ -1,16 +1,16 @@
 'use client'
 
 import { poppins } from '@/utils/fonts'
-import { News } from '@/utils/types'
+import { Article } from '@/utils/types'
 import { useRouter } from 'next/navigation'
 import { IoIosArrowDropleftCircle } from 'react-icons/io'
 
 interface HeroSectionProps {
-  news: News
+  article: Article
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  news
+  article
 }) => {
   const router = useRouter()
   return (
@@ -25,11 +25,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             Kembali
           </p>
         </button>
-        <p>
-          {new Date(news.date).toLocaleDateString('id', { month: 'long', day: 'numeric', year: 'numeric' })}
-        </p>
         <h1 className='text-5xl font-semibold text-dark'>
-          {news.title}
+          {article.title}
         </h1>
       </div>
     </section>
