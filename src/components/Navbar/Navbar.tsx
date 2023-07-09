@@ -119,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ session }) => {
         <div className='flex gap-2'>
           {!session &&
             <Link
-              href={'/login'}
+              href={`/login?callbackUrl=${pathname}`}
               className='
               text-purple font-bold px-[20px] xs:px-[32px] py-[16px] rounded-[15px]
               hover:bg-purple hover:text-white transition
