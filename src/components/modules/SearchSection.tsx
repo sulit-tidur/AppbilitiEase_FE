@@ -3,10 +3,11 @@
 import { usePathname } from 'next/navigation'
 import { FormEvent, useMemo, useRef, useState } from "react"
 import { PiMagnifyingGlassBold } from "react-icons/pi"
+import { BeatLoader } from 'react-spinners'
 
 interface SearchSectionProps {
   placeholder: string
-  action: (value: string) => void
+  action: (value: string) => Promise<void>
 }
 
 const SearchSection: React.FC<SearchSectionProps> = ({
@@ -15,6 +16,7 @@ const SearchSection: React.FC<SearchSectionProps> = ({
   const [value, setValue] = useState<string>('')
   const ref = useRef<HTMLInputElement>(null)
   const pathname = usePathname()
+  const [loading, setLoading] = useState(false)
 
   const long = useMemo(() => {
     if (pathname === '/edukasi-berita') {
@@ -23,9 +25,13 @@ const SearchSection: React.FC<SearchSectionProps> = ({
     return false
   }, [pathname])
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    setLoading(true)
+
     e.preventDefault()
-    action(value)
+    await action(value)
+
+    setLoading(false)
   }
 
   return (
@@ -50,14 +56,18 @@ const SearchSection: React.FC<SearchSectionProps> = ({
           <button
             type="submit"
             className={`
-              absolute hidden xs:block bg-purple rounded-full transition-all delay-300 duration-1000
+              absolute hidden xs:flex items-center justify-center w-[142px] md:w-[190px] h-[56px] bg-purple rounded-full transition-all delay-300 duration-1000
               right-[4px] ml-4 ${value == '' ? 'motion-reduce:opacity-0 motion-safe:translate-x-[110%]' : 'motion-reduce:opacity-100 translate-x-0'} peer-focus:translate-x-0
               motion-reduce:peer-focus:opacity-100
             `}
           >
-            <p className="p-4 font-medium text-white px-14 md:px-20">
-              Cari
-            </p>
+            {loading ? (
+              <BeatLoader color='#fff' size={12} />
+            ) : (
+              <p className="p-4 font-medium text-white px-14 md:px-20">
+                Cari
+              </p>
+            )}
           </button>
         </div>
       </form>

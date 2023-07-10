@@ -33,8 +33,13 @@ const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({
             facility={facility}
           />
         ))}
+        {facilitiesList.facilities?.length === 0 &&
+          <h1 className='font-medium text-subheader text-dark'>
+            Fasilitas tidak tersedia :(
+          </h1>
+        }
       </div>
-    </section>
+    </section >
   )
 }
 
