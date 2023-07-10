@@ -6,7 +6,7 @@ import { signOut } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { FormEvent, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { BeatLoader } from 'react-spinners'
 
@@ -20,10 +20,12 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
 }) => {
   const { session, unAuthorized } = auth
 
-  if (unAuthorized) {
-    toast.error('Sesi kamu telah berakhir. Silakan login lagi ya :)')
-    signOut()
-  }
+  useEffect(() => {
+    if (unAuthorized) {
+      toast.error('Sesi kamu telah berakhir. Silakan login lagi ya :)')
+      signOut()
+    }
+  }, [unAuthorized])
 
   const [description, setDescription] = useState('')
   const [rating, setRating] = useState(1)
