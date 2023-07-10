@@ -37,8 +37,8 @@ const SearchSection: React.FC<SearchSectionProps> = ({
             transition hover:shadow-lg relative overflow-hidden hover:cursor-pointer isolate
           "
         >
-          <PiMagnifyingGlassBold size={15} className="mx-4 xs:mx-0 xs:absolute xs:left-[20px]" />
-          <input
+          <PiMagnifyingGlassBold size={15} className="absolute left-0 min-w-[15px] mx-4" />
+          {/* <input
             type="text" placeholder={placeholder} ref={ref}
             value={value} onChange={(e) => setValue(e.target.value)}
             className={`
@@ -46,12 +46,21 @@ const SearchSection: React.FC<SearchSectionProps> = ({
             ${value === '' ? `w-full ${long ? 'xs:motion-safe:w-[195px]' : 'xs:motion-safe:w-[100px]'} pr-0` : 'w-[calc(100%-102px)] pr-[107px] md:pr-[157px]'}
             motion-safe:transition-all motion-safe:duration-1000 ease-out peer
             `}
+          /> */}
+          <input
+            type="text" placeholder={placeholder} ref={ref}
+            value={value} onChange={(e) => setValue(e.target.value)}
+            className={`
+              xs:w-[calc(100%-96px)] cursor-pointer focus:cursor-text focus:translate-x-0 outline-none pr-[107px] md:pr-[157px]
+              ${value === '' ? `${long ? 'xs:motion-safe:translate-x-[calc(50%-87px)]' : 'xs:motion-safe:translate-x-[calc(50%-50px)]'}` : 'motion-safe:translate-x-0'}
+              motion-safe:transition-all motion-safe:duration-1000 ease-out peer
+            `}
           />
           <button
             type="submit"
             className={`
-              hidden xs:block bg-purple rounded-full transition-all delay-300 duration-1000 ease-out
-              absolute right-[4px] ${value == '' ? 'motion-reduce:opacity-0 motion-safe:translate-x-[110%]' : 'motion-reduce:opacity-100 translate-x-0'} peer-focus:translate-x-0
+              absolute hidden xs:block bg-purple rounded-full transition-all delay-300 duration-1000
+              right-[4px] ml-4 ${value == '' ? 'motion-reduce:opacity-0 motion-safe:translate-x-[110%]' : 'motion-reduce:opacity-100 translate-x-0'} peer-focus:translate-x-0
               motion-reduce:peer-focus:opacity-100
             `}
           >
