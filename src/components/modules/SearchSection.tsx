@@ -37,21 +37,12 @@ const SearchSection: React.FC<SearchSectionProps> = ({
             transition hover:shadow-lg relative overflow-hidden hover:cursor-pointer isolate
           "
         >
-          <PiMagnifyingGlassBold size={15} className="absolute left-0 min-w-[15px] mx-4" />
-          {/* <input
-            type="text" placeholder={placeholder} ref={ref}
-            value={value} onChange={(e) => setValue(e.target.value)}
-            className={`
-            xs:focus:w-[calc(100%-102px)] cursor-pointer focus:cursor-text outline-none motion-reduce:w-[calc(100%-102px)] motion-reduce:pr-[107px] motion-reduce:md:pr-[157px]
-            ${value === '' ? `w-full ${long ? 'xs:motion-safe:w-[195px]' : 'xs:motion-safe:w-[100px]'} pr-0` : 'w-[calc(100%-102px)] pr-[107px] md:pr-[157px]'}
-            motion-safe:transition-all motion-safe:duration-1000 ease-out peer
-            `}
-          /> */}
+          <PiMagnifyingGlassBold size={15} className="xs:absolute left-0 min-w-[15px] mx-4" />
           <input
             type="text" placeholder={placeholder} ref={ref}
             value={value} onChange={(e) => setValue(e.target.value)}
             className={`
-              xs:w-[calc(100%-96px)] cursor-pointer focus:cursor-text focus:translate-x-0 outline-none pr-[107px] md:pr-[157px]
+              w-full xs:w-[calc(100%-96px)] cursor-pointer focus:cursor-text focus:translate-x-0 outline-none xs:pr-[107px] md:pr-[157px]
               ${value === '' ? `${long ? 'xs:motion-safe:translate-x-[calc(50%-87px)]' : 'xs:motion-safe:translate-x-[calc(50%-50px)]'}` : 'motion-safe:translate-x-0'}
               motion-safe:transition-all motion-safe:duration-1000 ease-out peer
             `}
