@@ -15,7 +15,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
       {/* Facility Picture */}
       <div className='rounded-[14px] overflow-hidden isolate'>
         <Image
-          src={facility.image}
+          src={facility.images[0].image}
           width={464} height={238} alt='Fasilitas Terdekat'
           className='motion-safe:group-hover:scale-105 transition w-full aspect-[232/119] object-cover rounded-[14px]'
         />

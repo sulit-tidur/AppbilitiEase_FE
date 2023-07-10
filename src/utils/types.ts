@@ -6,10 +6,11 @@ export interface Facility {
   longitude: string
   latitude: string
   location: string
-  image: string
+  images: FacilityImages[]
   rating: number
   total_rating: number
   sum_rating: number
+  disability_support: string[]
 }
 
 export interface Review {
@@ -18,6 +19,12 @@ export interface Review {
   image: string
   description: string
   rating: number
+}
+
+export interface FacilityImages {
+  id: number
+  name: string
+  image: string
 }
 
 export interface Developer {

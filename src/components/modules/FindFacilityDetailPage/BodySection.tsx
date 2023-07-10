@@ -24,7 +24,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
         {/* Image & Location */}
         <FindFacilitySection>
           <Image
-            src={facility.image}
+            src={facility.images[0].image}
             width={1200} height={560} alt='Gambar Artikel'
             className='aspect-[1200/560] w-full object-cover rounded-[20px]'
           />
