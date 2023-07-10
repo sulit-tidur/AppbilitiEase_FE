@@ -50,6 +50,22 @@ const BodySection: React.FC<BodySectionProps> = async ({
 
         <hr />
 
+        {/* Description */}
+        <FindFacilitySection>
+          <h1 className='font-semibold text-header text-dark'>
+            Fasilitas yang Disediakan
+          </h1>
+          <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-800'>
+            {facility.disability_support.map((support, index) => (
+              <li key={index} className='capitalize'>
+                {support}
+              </li>
+            ))}
+          </p>
+        </FindFacilitySection>
+
+        <hr />
+
         {/* Location */}
         <FindFacilitySection>
           <h1 className='font-semibold text-header text-dark'>
