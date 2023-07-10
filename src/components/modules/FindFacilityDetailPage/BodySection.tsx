@@ -27,11 +27,6 @@ const BodySection: React.FC<BodySectionProps> = async ({
           <div className='rounded-[20px] overflow-hidden isolate'>
             <ImageCarousel images={facility.images} />
           </div>
-          <Image
-            src={facility.images[0].image}
-            width={1200} height={560} alt='Gambar Artikel'
-            className='aspect-[1200/560] w-full object-cover rounded-[20px]'
-          />
           <div className='flex items-center gap-2 text-neutral-400'>
             <HiOutlineLocationMarker size={27} />
             <p className='font-medium text-content'>
