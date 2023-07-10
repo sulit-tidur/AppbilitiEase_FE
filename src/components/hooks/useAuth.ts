@@ -20,7 +20,6 @@ const useAuth = async () => {
     }
 
   } catch (err) {
-    console.error(err)
     if (isAxiosError(err) && err.response?.status === 401) {
       unAuthorized = true
     } else {
