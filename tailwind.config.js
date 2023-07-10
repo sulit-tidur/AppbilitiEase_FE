@@ -32,6 +32,7 @@ module.exports = {
         'violet': '#E5E0FF',
         'light-purple': '#7358FF',
         'light-yellow': '#FFF3CA',
+        'light-gray': '#F7FBFF'
       }
     },
   },

@@ -1,6 +1,7 @@
 import { Facility } from '@/utils/types'
 import Image from 'next/image'
 import Link from 'next/link'
+import LabelRating from '../FindFacilityDetailPage/LabelRating'
 
 interface FacilityCardProps {
   facility: Facility
@@ -25,27 +26,26 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
         <p className='text-base font-normal text-neutral-500'>
           {facility.location}
         </p>
-        <Image
-          src={'/images/stars.svg'}
-          width={88} height={16} alt='Review Stars'
-        />
+        <div className='w-[88px]'>
+          <LabelRating rating={facility.rating} />
+        </div>
       </div>
 
       {/* Title */}
-      <h3 className='text-lg font-semibold'>
+      <h3 className='font-semibold text-content'>
         {facility.name}
       </h3>
 
       <hr className='border-dashed border-[1px] border-neutral-300' />
 
       {/* Description */}
-      <p className='text-xs font-normal line-clamp-3'>
+      <p className='font-normal break-all whitespace-pre-wrap text-content-sm line-clamp-3'>
         {facility.description}
       </p>
 
       {/* Details Button */}
       <Link
-        href={'/'}
+        href={`/cari-fasilitas/${facility.id}`}
         className='
           text-lg font-normal text-white bg-rose w-fit self-center py-2 px-10 rounded-full
           translate-y-1/2 absolute bottom-0 motion-safe:hover:translate-y-[40%] transition

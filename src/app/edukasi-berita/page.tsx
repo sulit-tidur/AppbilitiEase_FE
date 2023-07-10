@@ -1,5 +1,8 @@
-import BodyModule from '@/components/modules/EducationNewsPage/BodyModule'
-import HeroModule from '@/components/modules/EducationNewsPage/HeroModule'
+import BodyModule from '@/components/modules/BodyModule'
+import EducationSection from '@/components/modules/EducationNewsPage/EducationSection'
+import NewsSection from '@/components/modules/EducationNewsPage/NewsSection'
+import SearchArticle from '@/components/modules/EducationNewsPage/SearchArticle'
+import HeroModule from '@/components/modules/HeroModule'
 import getArticles from '@/utils/actions/getArticles'
 
 export default async function EducationNews() {
@@ -13,8 +16,14 @@ export default async function EducationNews() {
 
   return (
     <>
-      <HeroModule />
-      <BodyModule educations={educations} news={news} />
+      <HeroModule title='Edukasi & Berita' bg='bg-[url(/images/bg/bg-edukasi-berita.svg)]' />
+      <BodyModule>
+        <SearchArticle />
+        <hr />
+        <EducationSection educations={educations} />
+        <hr />
+        <NewsSection news={news} />
+      </BodyModule>
     </>
   )
 }
