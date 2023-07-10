@@ -7,6 +7,7 @@ import FacilityMap from './FacilitiyMap'
 import ReviewForm from './ReviewForm'
 import useAuth from '@/components/hooks/useAuth'
 import LabelRating from './LabelRating'
+import ImageCarousel from './ImageCarousel'
 
 interface BodySectionProps {
   facility: Facility
@@ -23,6 +24,9 @@ const BodySection: React.FC<BodySectionProps> = async ({
       <div className='-translate-y-[10vh] flex flex-col gap-4 md:gap-14'>
         {/* Image & Location */}
         <FindFacilitySection>
+          <div className='rounded-[20px] overflow-hidden isolate'>
+            <ImageCarousel images={facility.images} />
+          </div>
           <Image
             src={facility.images[0].image}
             width={1200} height={560} alt='Gambar Artikel'
@@ -57,7 +61,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
           </h1>
           <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-800'>
             {facility.disability_support.map((support, index) => (
-              <li key={index} className='capitalize'>
+              <li key={index} className=''>
                 {support}
               </li>
             ))}
