@@ -25,7 +25,9 @@ const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({
     <section className={`${poppins.className} flex flex-col items-center gap-8 pb-[40px] lg:pb-0 sm:px-14 md:gap-14`}>
       <div className='flex flex-col items-center w-full gap-14'>
         {!facilitiesList.facilities &&
-          <BeatLoader color='#5842DB' size={20} />
+          <div className='flex justify-center w-full'>
+            <BeatLoader color='#5842DB' size={20} />
+          </div>
         }
         {facilitiesList.facilities && facilitiesList.facilities.map((facility) => (
           <FacilityCard
