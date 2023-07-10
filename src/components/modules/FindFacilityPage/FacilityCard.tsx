@@ -11,18 +11,18 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   facility
 }) => {
   return (
-    <div className='relative flex flex-col lg:flex-row w-full max-w-[1344px] lg:max-h-[420px] gap-x-10 gap-y-2 p-4 pb-[40px] lg:pb-4 border-2 rounded-[19px] bg-white shadow-xl group'>
+    <div className='relative grid grid-cols-1 lg:grid-cols-2 w-full max-w-[1344px] gap-x-10 gap-y-2 p-4 border-2 rounded-[19px] bg-white shadow-xl group'>
       {/* Image */}
-      <div className='flex-1 rounded-[10px] overflow-hidden isolate'>
+      <div className='rounded-[10px] overflow-hidden isolate'>
         <Image
           src={facility.images[0].image}
           width={548} height={365} alt='Gambar Fasilitas'
-          className='aspect-[548/365] min-w-full h-full object-cover group-hover:scale-105 transition'
+          className='aspect-[548/365] w-full object-cover group-hover:scale-105 transition'
         />
       </div>
 
       {/* Content */}
-      <div className='flex flex-col flex-1 gap-2 lg:relative'>
+      <div className='flex flex-col gap-2 lg:relative'>
         {/* Name & Stars */}
         <div className='flex flex-wrap place-content-between gap-x-4'>
           <h3 className='text-xl font-semibold'>
@@ -46,7 +46,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
         <hr className='border-dashed border-[1px] border-neutral-300' />
 
         {/* Description */}
-        <p className='font-normal break-words whitespace-pre-wrap text-content-sm line-clamp-3 mb-[52px] lg:line-clamp-4 xl:line-clamp-6'>
+        <p className='mb-4 font-normal break-words whitespace-pre-wrap text-content-sm line-clamp-3 lg:line-clamp-4 xl:line-clamp-6'>
           {facility.description}
         </p>
 
