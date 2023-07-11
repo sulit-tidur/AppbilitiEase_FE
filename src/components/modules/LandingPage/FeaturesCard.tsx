@@ -49,7 +49,7 @@ const FeaturesCard = () => {
             Cari Fasilitas Terdekat
           </p>
           <p className='text-xs text-center text-white/70 xxs:text-left md:text-center xl:text-left'>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old.
+            Temukan fasilitas ramah disabilitas yang tersedia sesuai dengan lokasi tujuan
           </p>
         </div>
       </button>
@@ -65,10 +65,10 @@ const FeaturesCard = () => {
         />
         <div className='flex flex-col items-center gap-2 xxs:items-start md:items-center xl:items-start'>
           <p className='text-lg font-medium text-center text-white xxs:text-left md:text-center xl:text-left group-hover:underline'>
-            Dapatkan Edukasi & Berita Terkini
+            Akses Edukasi & Berita Terkini
           </p>
           <p className='text-xs text-center text-white/70 xxs:text-left md:text-center xl:text-left'>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old.
+            Dapatkan artikel edukasi dan berita terkini seputar disabilitas dengan mudah
           </p>
         </div>
       </button>
@@ -87,7 +87,7 @@ const FeaturesCard = () => {
             Berikan Penilaian
           </p>
           <p className='text-xs text-center text-white/70 xxs:text-left md:text-center xl:text-left'>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old.
+            Tingkatkan kualitas fasilitas ramah disabilitas dengan memberikan ulasan dan penilaian
           </p>
         </div>
       </button>

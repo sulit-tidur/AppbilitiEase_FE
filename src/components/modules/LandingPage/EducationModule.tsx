@@ -77,7 +77,7 @@ const EducationModule = () => {
                       Edukasi
                     </h5>
                     <p className='font-normal text-neutral-400'>
-                      Very Contrary to popular belief, Lorem Ipsum is not simply random text.
+                      Perkaya wawasan dengan mempelajari artikel edukasi seputar disabilitas
                     </p>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const EducationModule = () => {
                       Berita
                     </h5>
                     <p className='font-normal text-neutral-400'>
-                      Very Contrary to popular belief, Lorem Ipsum is not simply random text.
+                      Ketahui informasi terkini seputar disabilitas
                     </p>
                   </div>
                 </div>

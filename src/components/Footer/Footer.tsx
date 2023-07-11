@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import Logo from '../Logo/Logo'
+import { BsBuildingsFill, BsNewspaper } from 'react-icons/bs'
 
 const Footer = () => {
   return (
@@ -6,15 +8,24 @@ const Footer = () => {
       <div className='container mx-auto p-10 flex flex-col md:flex-row min-h-[355px] place-content-between items-center justify-center gap-10 md:gap-52'>
         <div className='flex flex-col flex-1 w-full gap-4'>
           <Logo footer />
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy a type specimen book.</p>
+          <ul className='flex flex-col gap-2'>
+            <Link href={'/cari-fasilitas'} className='flex gap-[4px] items-center hover:underline w-fit'>
+              <BsBuildingsFill />
+              <p>Cari Fasilitas</p>
+            </Link>
+            <Link href={'/edukasi-berita'} className='flex gap-[4px] items-center hover:underline w-fit'>
+              <BsNewspaper />
+              <p>Edukasi & Berita</p>
+            </Link>
+          </ul>
         </div>
         <div className='flex flex-col flex-1 w-full gap-4'>
           <h3 className='font-semibold'>
             Contact Information
           </h3>
-          <p>+0913-705-3875</p>
-          <p>ElizabethJ@jourrapide.com</p>
-          <p>4808 Skinner Hollow Road Days Creek, OR 97429</p>
+          <p>+62-819-0828-5502</p>
+          <p>mhadziqrazin@gmail.com</p>
+          <p>Kota Depok, Jawa Barat, Indonesia 16421</p>
         </div>
       </div>
       <hr className='w-full border-[1px] border-[#B7B7B7]' />

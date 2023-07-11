@@ -28,7 +28,7 @@ const AboutUsModule = () => {
             </div>
             <div className={`${poppins.className}`}>
               <p className='text-lg font-medium text-neutral-400'>
-                Lorem Ipsum is simply dummy text of the printing.
+                Jika ada masalah, kami siap membantu!
               </p>
             </div>
           </div>

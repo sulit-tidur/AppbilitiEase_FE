@@ -39,8 +39,7 @@ const NearestFacilityModule: React.FC<NearestFacilityModuleProps> = ({
               <span className='text-purple'>Fasilitas</span> Terdekat
             </h1>
             <p className='text-xl font-medium text-neutral-400'>
-              Lorem Ipsum is simply dummy text of the printing.
-            </p>
+              Temukan Fasilitas Ramah Disabilitas yang Tersedia</p>
           </div>
 
           {/* Facilities */}

@@ -26,11 +26,11 @@ const DescriptionModule = () => {
               ${bubleOnScreen ? 'opacity-100 -translate-x-0 xs:-translate-x-10' : 'opacity-0 motion-safe:-translate-x-10 xs:-translate-x-20 motion-reduce:xs:-translate-x-10'}
             `}
           />
-          <h1 className='text-5xl font-bold capitalize text-dark'>
-            Apa ya Kalimat yang bagus <span className='text-purple'>Buat ini</span>
+          <h1 className='text-4xl font-bold capitalize xxs:text-5xl text-dark'>
+            Wujudkan Inklusi Melalui <span className='text-purple'>AppbilitiEase</span>
           </h1>
           <p>
-            AppbilitiEase merupakan aplikasi yang bertujuan untuk Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
+            AppbilitiEase merupakan aplikasi yang bertujuan untuk memudahkan masyarakat mencari fasilitas ramah disabilitas, meningkatkan kesadaran terhadap disabilitas, serta menyediakan konten edukasi dan berita seputar disabilitas.
           </p>
           <Link
             href={'/cari-fasilitas'}
