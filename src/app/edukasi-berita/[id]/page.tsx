@@ -6,7 +6,7 @@ import getArticles from '@/utils/actions/getArticles'
 export default async function Berita({ params }: { params: { id: string } }) {
   const article = await getArticles({ id: Number(params.id) })
 
-  if (!article[0]) {
+  if (isNaN(+params.id) || (!article[0])) {
     return (
       <NotFound message='Artikel' />
     )
