@@ -27,7 +27,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
         Edukasi
       </h1>
       <div className='
-        flex w-screen md:max-w-full gap-6 px-4 pb-[50px] overflow-x-auto isolate md:rounded-[30px]
+        flex w-screen md:w-fit md:max-w-full gap-6 px-4 pb-[50px] overflow-x-auto isolate md:rounded-[30px]
         scrollbar-thin scrollbar-thumb-purple scrollbar-track-neutral-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full
       '
       >
