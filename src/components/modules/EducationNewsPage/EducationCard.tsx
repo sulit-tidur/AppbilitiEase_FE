@@ -15,7 +15,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
     <div
       className={`
         flex flex-col p-4 pb-[40px] gap-2 hover:shadow-lg duration-300
-        max-w-[500px] rounded-[30px] relative group
+        max-w-[500px] rounded-[30px] relative group w-[207px] md:w-[282px] xl:w-[470px]
         ${type === 0 && 'bg-violet'}
         ${type === 1 && 'bg-light-yellow'}
         ${type === 2 && 'bg-pink'}
@@ -28,7 +28,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
           className='w-full aspect-[438/355] object-cover rounded-[14px] transition motion-safe:group-hover:scale-105'
         />
       </div>
-      <p className='w-full font-medium break-words text-content-sm text-dark line-clamp-3'>
+      <p className='font-medium break-words text-content-sm text-dark line-clamp-3'>
         {education.title}
       </p>
       <Link
