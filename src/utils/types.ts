@@ -1,9 +1,30 @@
 export interface Facility {
-  title: string
+  id: number
+  review: Review[]
+  name: string
   description: string
+  longitude: string
+  latitude: string
   location: string
-  src: string
-  href: string
+  images: FacilityImages[]
+  rating: number
+  total_rating: number
+  sum_rating: number
+  disability_support: string[]
+}
+
+export interface Review {
+  id: number,
+  user: string
+  image: string
+  description: string
+  rating: number
+}
+
+export interface FacilityImages {
+  id: number
+  name: string
+  image: string
 }
 
 export interface Developer {
@@ -16,16 +37,11 @@ export interface Developer {
   linkedin: string
 }
 
-export interface Education {
-  image: string
-  content: string
-  href: string
-}
-
-export interface News {
-  image: string
+export interface Article {
+  id: number
   title: string
   content: string
-  href: string
+  image: string
+  tag: "education" | "news"
   date: string
 }

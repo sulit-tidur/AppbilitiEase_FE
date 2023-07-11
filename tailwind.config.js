@@ -32,10 +32,13 @@ module.exports = {
         'violet': '#E5E0FF',
         'light-purple': '#7358FF',
         'light-yellow': '#FFF3CA',
+        'light-gray': '#F7FBFF'
       }
     },
   },
   plugins: [
-    require('tailwind-scrollbar')({ nocompatible: true })
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require('tailwind-scrollbar')({ nocompatible: true }),
+    (process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
   ],
 }
