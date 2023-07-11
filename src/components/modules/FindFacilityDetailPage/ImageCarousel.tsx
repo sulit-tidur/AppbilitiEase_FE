@@ -21,18 +21,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   };
   return (
     <Carousel
-      showThumbs swipeable showStatus={false} showIndicators={false} infiniteLoop autoPlay interval={5000} emulateTouch
+      showThumbs={false} swipeable showStatus={false} showIndicators={false} infiniteLoop autoPlay interval={5000} emulateTouch
       className=''
     >
       {images.map((image) => (
-        <div key={image.id}>
+        <div key={image.id} className='relative flex justify-center'>
           <Image
             src={image.image} key={image.id}
             width={1200} height={560} alt='Gambar Artikel'
-            className='aspect-[1200/560] rounded-[20px] w-full h-full object-cover'
+            className='aspect-[1200/560] w-full h-full object-cover'
           />
-          <div className='w-full p-2 bg-white'>
-            <p className='text-xs '>
+          <div className='absolute bottom-0 w-full py-2 bg-gradient-to-t from-black/60 pt-[20%]'>
+            <p className='text-xs font-semibold text-white'>
               {image.name}
             </p>
           </div>

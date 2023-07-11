@@ -8,6 +8,7 @@ import ReviewForm from './ReviewForm'
 import useAuth from '@/components/hooks/useAuth'
 import LabelRating from './LabelRating'
 import ImageCarousel from './ImageCarousel'
+import { poppins } from '@/utils/fonts'
 
 interface BodySectionProps {
   facility: Facility
@@ -24,10 +25,10 @@ const BodySection: React.FC<BodySectionProps> = async ({
       <div className='-translate-y-[10vh] flex flex-col gap-4 md:gap-14'>
         {/* Image & Location */}
         <FindFacilitySection>
-          <div className='rounded-[20px] overflow-hidden isolate'>
+          <div className={`${poppins.className} rounded-[20px] overflow-hidden isolate`}>
             <ImageCarousel images={facility.images} />
           </div>
-          <div className='absolute bottom-0 flex items-center gap-2 text-neutral-400'>
+          <div className='flex items-center gap-2 text-neutral-400'>
             <HiOutlineLocationMarker size={27} />
             <p className='font-medium text-content'>
               {facility.location}
