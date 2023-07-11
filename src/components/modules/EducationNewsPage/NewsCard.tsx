@@ -37,7 +37,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
         {/* Tag & Date */}
         <div className='flex items-center justify-between gap-2'>
           <div className='px-4 py-[4px] border-2 rounded-full w-fit border-dark'>
-            <p className='font-medium text-content'>
+            <p className='font-medium text-content text-dark'>
               Berita
             </p>
           </div>
