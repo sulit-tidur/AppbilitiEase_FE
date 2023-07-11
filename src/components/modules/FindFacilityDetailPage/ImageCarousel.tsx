@@ -22,7 +22,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <Image
             src={image.image} key={image.id}
             width={1200} height={560} alt='Gambar Artikel'
-            className='aspect-[1200/560] w-full h-full object-cover'
+            className='aspect-[1200/800] md:aspect-[1200/560] w-full h-full object-cover'
           />
           <div className='absolute bottom-0 w-full py-2 bg-gradient-to-t from-black/60 pt-[20%]'>
             <p className='text-xs font-semibold text-white'>
