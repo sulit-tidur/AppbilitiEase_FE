@@ -48,7 +48,7 @@ const SearchSection: React.FC<SearchSectionProps> = ({
             type="text" placeholder={placeholder} ref={ref}
             value={value} onChange={(e) => setValue(e.target.value)}
             className={`
-              w-full xxs:w-[calc(100%-96px)] cursor-pointer focus:cursor-text focus:translate-x-0 outline-none xxs:pr-[107px] md:pr-[157px]
+              w-full xxs:w-[calc(100%-96px)] cursor-pointer focus:cursor-text focus:translate-x-0 outline-none xxs:pr-[45px] pr-[20px] xs:pr-[107px] md:pr-[157px]
               ${value === '' ? `${long ? 'xxs:motion-safe:translate-x-[calc(50%-87px)]' : 'xxs:motion-safe:translate-x-[calc(50%-50px)]'}` : 'motion-safe:translate-x-0'}
               motion-safe:transition-all motion-safe:duration-1000 ease-out peer
             `}
@@ -56,7 +56,7 @@ const SearchSection: React.FC<SearchSectionProps> = ({
           <button
             type="submit"
             className={`
-              absolute hidden xxs:flex items-center justify-center w-[100px] xs:w-[142px] md:w-[190px] h-[41px] xs:h-[56px] bg-purple rounded-full transition-all delay-300 duration-1000
+              absolute hidden xxs:flex items-center justify-center w-[80px] xs:w-[142px] md:w-[190px] h-[41px] xs:h-[56px] bg-purple rounded-full transition-all delay-300 duration-1000
               right-[4px] ml-4 ${value == '' ? 'motion-reduce:opacity-0 motion-safe:translate-x-[110%]' : 'motion-reduce:opacity-100 translate-x-0'} peer-focus:translate-x-0
               motion-reduce:peer-focus:opacity-100
             `}
