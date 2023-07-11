@@ -41,7 +41,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
               Berita
             </p>
           </div>
-          <p className='text-content'>
+          <p className='text-content text-dark'>
             {new Date(news.date).toLocaleDateString('id', { month: 'long', day: 'numeric', year: 'numeric' })}
           </p>
         </div>

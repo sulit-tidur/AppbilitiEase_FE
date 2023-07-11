@@ -11,11 +11,20 @@ const BodySection: React.FC<BodySectionProps> = ({
   return (
     <section className='container flex flex-col px-4 mx-auto md:px-20 pb-14'>
       <div className='-translate-y-[10vh] flex flex-col gap-20'>
-        <Image
-          src={article.image}
-          width={1200} height={560} alt='Gambar Artikel'
-          className='aspect-[1200/560] w-full object-cover rounded-[20px]'
-        />
+        {article.tag === 'education' &&
+          <Image
+            src={article.image}
+            width={1200} height={560} alt='Gambar Artikel'
+            className='aspect-[1200/560] w-full object-contain rounded-[20px]'
+          />
+        }
+        {article.tag === 'news' &&
+          <Image
+            src={article.image}
+            width={1200} height={560} alt='Gambar Artikel'
+            className='aspect-[1200/560] w-full object-cover rounded-[20px]'
+          />
+        }
         <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-600'>
           {article.content}
         </p>
