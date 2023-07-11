@@ -6,6 +6,7 @@ import { Article } from '@/utils/types'
 import useArticleList from '@/components/hooks/useArticleList'
 import { useEffect } from 'react'
 import { BeatLoader } from 'react-spinners'
+import useLoading from '@/components/hooks/useLoading'
 
 interface EducationSectionProps {
   educations: Article[]
@@ -15,6 +16,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
   educations
 }) => {
   const educationsList = useArticleList()
+  const { loadingEdukasi } = useLoading()
 
   useEffect(() => {
     educationsList.setEducations(educations)
@@ -31,17 +33,17 @@ const EducationSection: React.FC<EducationSectionProps> = ({
         scrollbar-thin scrollbar-thumb-purple scrollbar-track-neutral-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full
       '
       >
-        {!educationsList.educations &&
+        {(!educationsList.educations || loadingEdukasi) &&
           <BeatLoader color='#5842DB' size={20} />
         }
-        {educationsList.educations && educationsList.educations.map((education, index) => (
+        {(!loadingEdukasi && educationsList.educations) && educationsList.educations.map((education, index) => (
           <EducationCard
             key={index}
             education={education}
             type={index % 3}
           />
         ))}
-        {educationsList.educations?.length === 0 &&
+        {(!loadingEdukasi && educationsList.educations?.length) === 0 &&
           <h1 className='font-medium text-center text-subheader text-dark'>
             Edukasi tidak tersedia :(
           </h1>

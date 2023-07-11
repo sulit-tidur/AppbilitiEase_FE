@@ -6,6 +6,7 @@ import { Article } from '@/utils/types'
 import { useEffect } from 'react'
 import useArticleList from '@/components/hooks/useArticleList'
 import { BeatLoader } from 'react-spinners'
+import useLoading from '@/components/hooks/useLoading'
 
 interface NewsSectionProps {
   news: Article[]
@@ -15,6 +16,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({
   news
 }) => {
   const newsList = useArticleList()
+  const { loadingBerita } = useLoading()
 
   useEffect(() => {
     newsList.setNews(news)
@@ -27,17 +29,17 @@ const NewsSection: React.FC<NewsSectionProps> = ({
         Berita
       </h1>
       <div className='flex flex-col items-center w-full gap-6'>
-        {!newsList.news &&
+        {(!newsList.news || loadingBerita) &&
           <BeatLoader color='#5842DB' size={20} />
         }
-        {newsList.news && newsList.news.map((news, index) => (
+        {(!loadingBerita && newsList.news) && newsList.news.map((news, index) => (
           <NewsCard
             key={news.id}
             news={news}
             type={index % 3}
           />
         ))}
-        {newsList.news?.length === 0 &&
+        {(!loadingBerita && newsList.news?.length) === 0 &&
           <h1 className='font-medium text-center text-subheader text-dark'>
             Berita tidak tersedia :(
           </h1>
