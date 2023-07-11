@@ -43,4 +43,5 @@ export interface Article {
   content: string
   image: string
   tag: "education" | "news"
+  date: string
 }
