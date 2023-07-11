@@ -12,13 +12,6 @@ interface ImageCarouselProps {
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images
 }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
   return (
     <Carousel
       showThumbs={false} swipeable showStatus={false} showIndicators={false} infiniteLoop autoPlay interval={5000} emulateTouch
