@@ -36,7 +36,7 @@ const NearestFacilityModule: React.FC<NearestFacilityModuleProps> = ({
           {/* Header */}
           <div className='flex flex-col items-center gap-2 text-center'>
             <h1 className='text-5xl font-semibold text-dark'>
-              <span className='text-purple'>Fasilitas</span> Terdekat
+              <span className='text-purple'>Fasilitas</span> Tersedia
             </h1>
             <p className='text-xl font-medium text-neutral-400'>
               Temukan Fasilitas Ramah Disabilitas yang Tersedia</p>
