@@ -11,7 +11,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
   facility
 }) => {
   return (
-    <div className='grid grid-cols-1 h-full bg-white p-4 rounded-[14px] max-w-[480px] shadow-lg transition duration-300 hover:shadow-xl gap-2 relative group'>
+    <div className='grid grid-cols-1 h-full bg-white p-4 rounded-[14px] max-w-[480px] shadow-lg transition duration-300 gap-2 relative group'>
       {/* Facility Picture */}
       <div className='rounded-[14px] aspect-[464/238] overflow-hidden isolate'>
         <Image
