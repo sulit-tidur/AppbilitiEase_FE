@@ -38,19 +38,7 @@ const BodySection: React.FC<BodySectionProps> = async ({
 
         <hr />
 
-        {/* Description */}
-        <FindFacilitySection>
-          <h1 className='font-semibold text-header text-dark'>
-            Deskripsi Tempat
-          </h1>
-          <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-800'>
-            {facility.description}
-          </p>
-        </FindFacilitySection>
-
-        <hr />
-
-        {/* Description */}
+        {/* Dissability Support */}
         <FindFacilitySection>
           <h1 className='font-semibold text-header text-dark'>
             Fasilitas yang Disediakan
@@ -65,6 +53,19 @@ const BodySection: React.FC<BodySectionProps> = async ({
         </FindFacilitySection>
 
         <hr />
+
+        {/* Description */}
+        <FindFacilitySection>
+          <h1 className='font-semibold text-header text-dark'>
+            Deskripsi Tempat
+          </h1>
+          <p className='font-normal break-words whitespace-pre-wrap text-content text-neutral-800'>
+            {facility.description}
+          </p>
+        </FindFacilitySection>
+
+        <hr />
+
 
         {/* Location */}
         <FindFacilitySection>

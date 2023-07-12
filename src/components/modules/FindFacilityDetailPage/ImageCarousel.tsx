@@ -14,7 +14,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 }) => {
   return (
     <Carousel
-      showThumbs={false} swipeable showStatus={false} showIndicators={false} infiniteLoop autoPlay interval={5000} emulateTouch
+      showThumbs={false} swipeable showStatus={false} infiniteLoop autoPlay interval={5000} emulateTouch
       className=''
     >
       {images.map((image) => (
@@ -25,7 +25,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
             className='aspect-[1200/800] md:aspect-[1200/560] w-full h-full object-cover'
           />
           <div className='absolute bottom-0 w-full py-2 bg-gradient-to-t from-black/60 pt-[20%]'>
-            <p className='text-xs font-semibold text-white'>
+            <p className='text-xs font-semibold text-white -translate-y-6'>
               {image.name}
             </p>
           </div>

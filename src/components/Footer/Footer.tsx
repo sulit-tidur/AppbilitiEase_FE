@@ -31,7 +31,7 @@ const Footer = () => {
       <hr className='w-full border-[1px] border-[#B7B7B7]' />
       <div className='container flex justify-center p-4 mx-auto'>
         <p className='text-[#606060] font-light'>
-          AppbilitiEase All Right Reserved, 2023
+          AppbilitiEase All Rights Reserved, 2023
         </p>
       </div>
     </footer>
