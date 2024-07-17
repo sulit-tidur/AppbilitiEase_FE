@@ -1,0 +1,138 @@
+[
+  {
+    "id": 5,
+    "review": [
+      {
+        "id": 29,
+        "user": "2021_Humayra Annisa ",
+        "image": "https://lh3.googleusercontent.com/a/AAcHTtdgowtTF5SdNtQVGcPzkXHkPyP1MZMy9UA8ey9sJUbo=s96-c",
+        "description": "Liftnya sempit dan pintunya suka tertutup dengan cepat",
+        "rating": 3
+      },
+      {
+        "id": 30,
+        "user": "Muhammad Hadziq Razin",
+        "image": "https://lh3.googleusercontent.com/a/AAcHTtcee5LcQyW_1x5WcVcVKo3YRrxNQ9oMi3nAzSFfMAIThg=s96-c",
+        "description": "Bagus, fasilitas sudah cukup lengkap👍",
+        "rating": 4
+      }
+    ],
+    "images": [
+      {
+        "id": 9,
+        "name": "Fasilkom UI",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/707CD12D-C9FD-4ED4-A948-5856F41C1CDD_yde6sj"
+      },
+      {
+        "id": 14,
+        "name": "Toilet Khusus Penyandang Disabilitas",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.45_ywitca"
+      },
+      {
+        "id": 13,
+        "name": "Parkiran Khusus Penyandang Disabilitas",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.39_pfj8kx"
+      },
+      {
+        "id": 12,
+        "name": "Ramp",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.43_urhl6a"
+      },
+      {
+        "id": 11,
+        "name": "Ramp",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.41_fccg9y"
+      },
+      {
+        "id": 10,
+        "name": "Lift",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.46_jrho7h"
+      }
+    ],
+    "name": "Fasilkom UI (Gedung Lama)",
+    "description": "Fakultas Ilmu Komputer Universitas Indonesia berdiri pada tahun 1993. Gedung A, B, dan C (gedung lama) berlokasi di dekat Perpustakaan UI dan Fakultas Ilmu Budaya Universitas Indonesia. Prodi Ilmu Komputer sendiri diselenggarakan pada tahun 1986 oleh lembaga yang bernama Pusat Ilmu Komputer Universitas Indonesia atau yang dikenal Pusilkom UI.\r\n\r\nReferensi:\r\nhttps://www.anakui.com/kenal-ui-11-fakta-fasilkom-ui-punya-acara-it-terbesar-di-ui/",
+    "longitude": "106.828707",
+    "latitude": "-6.364461",
+    "location": "Kota Depok, Jawa Barat",
+    "disability_support": [
+      "Ramp",
+      "Lift (Gedung B)",
+      "Toilet khusus penyandang disabilitas",
+      "Parkiran khusus penyandang disabilitas"
+    ],
+    "rating": 3.5,
+    "total_rating": 2,
+    "sum_rating": 7
+  },
+  {
+    "id": 6,
+    "review": [],
+    "images": [
+      {
+        "id": 15,
+        "name": "Fasilkom UI (Gedung Baru)",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/09BE36FD-65BD-4A30-A249-C2A2D9FBBC84_htephu"
+      },
+      {
+        "id": 16,
+        "name": "Ramp",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-11_at_15.21.47_2_ntgumi"
+      },
+      {
+        "id": 17,
+        "name": "Ramp",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-11_at_15.21.47_n2qdat"
+      },
+      {
+        "id": 18,
+        "name": "Lift",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-11_at_15.21.47_1_odz4lr"
+      }
+    ],
+    "name": "Fasilkom UI (Gedung Baru)",
+    "description": "Fasilkom UI Gedung Baru biasa disebut gedung baru karena memang baru mulai dibangun sekitar tahun 2010, jauh setelah gedung pertama berdiri. Berbeda dengan gedung lama yang memiliki 3 bangunan, Gedung Baru Fasilkom UI merupakan sebuah bangunan dengan 7 tingkat. Gedung Baru Fasilkom UI berlokasi di antara Fakultas MIPA dan Fakultas Ilmu Keperawatan, sekitar 1 km dari Gedung Lama Fasilkom UI.",
+    "longitude": "106.827177",
+    "latitude": "-6.370272",
+    "location": "Kota Depok, Jawa Barat",
+    "disability_support": [
+      "Lift",
+      "Ramp"
+    ],
+    "rating": 0,
+    "total_rating": 0,
+    "sum_rating": 0
+  },
+  {
+    "id": 4,
+    "review": [],
+    "images": [
+      {
+        "id": 1,
+        "name": "Perpustakaan Universitas Indonesia",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/B3D602BA-C92E-4307-82F1-9E3F9DE25E3B_hryuvb"
+      },
+      {
+        "id": 3,
+        "name": "Ramp",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.35_mckwio"
+      },
+      {
+        "id": 2,
+        "name": "Lift",
+        "image": "https://res.cloudinary.com/dumfcnsqm/image/upload/WhatsApp_Image_2023-07-10_at_20.14.36_lfhnwp"
+      }
+    ],
+    "name": "The Crystal of Knowledge (Perpustakaan UI)",
+    "description": "Berlokasi di antara Masjid UI dan Fasilkom UI, \"The Crystal of Knowledge\" atau Perpustakaan Universitas Indonesia merupakan perwujudan dari penggabungan beberapa perpustakaan fakultas di Universitas Indonesia. Selesai dibangun pada tahun 2011, Perpustakaan UI merupakan salah satu unit pendukung utama kegiatan akademik di Universitas Indonesia hingga saat ini.\r\n\r\nReferensi:\r\nhttps://www.ui.ac.id/fasilitas/perpustakaan/",
+    "longitude": "106.829753",
+    "latitude": "-6.365218",
+    "location": "Kota Depok, Jawa Barat",
+    "disability_support": [
+      "Lift",
+      "Ramp"
+    ],
+    "rating": 0,
+    "total_rating": 0,
+    "sum_rating": 0
+  }
+]

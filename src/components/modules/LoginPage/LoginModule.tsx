@@ -35,9 +35,10 @@ const LoginModule = () => {
             </p>
             <button
               onClick={() => signIn('google', { callbackUrl: callbackUrl })}
+              disabled={true}
               className='
                 bg-light-blue py-[12px] px-[9px] flex items-center gap-2 justify-center rounded-[12px]
-                transition motion-safe:hover:-translate-y-1 hover:shadow-md
+                transition motion-safe:hover:-translate-y-1 hover:shadow-md hover:cursor-not-allowed
               '
             >
               <Image
@@ -48,6 +49,9 @@ const LoginModule = () => {
                 Masuk dengan Google
               </p>
             </button>
+            <p className='text-sm font-normal text-center'>
+              Maaf saat ini AppbilitiEase sudah tidak beroperasi lagi :(
+            </p>
           </div>
         </div>
       </div>
