@@ -23,9 +23,9 @@ const Footer = () => {
           <h3 className='font-semibold'>
             Contact Information
           </h3>
-          <p>+62-819-0828-5502</p>
-          <p>mhadziqrazin@gmail.com</p>
-          <p>Kota Depok, Jawa Barat, Indonesia 16421</p>
+          <p>+62-123-4567-8910</p>
+          <p>help@appbilitiease.com</p>
+          <p>Kota Depok, Jawa Barat, Indonesia 16425</p>
         </div>
       </div>
       <hr className='w-full border-[1px] border-[#B7B7B7]' />
